@@ -3,190 +3,103 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title>单身月 让人不再孤单</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
+		<style>
+			html,
+			body {
+				width: 100%;
+				background: #634fc6;
+			}
+		</style>
 	</head>
 
 	<body>
-		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
-				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
-				</span>
-				<span class="mui-tab-label mt-5">首页</span>
-			</div>
-			<div class="mui-tab-item" onclick="nurse()">
-				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
-				</span>
-				<span class="mui-tab-label mt-5">护士</span>
-			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
-				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
-				</span>
-				<span class="mui-tab-label mt-5">精选</span>
-			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
-				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
-				</span>
-				<span class="mui-tab-label mt-5">个人中心</span>
-			</div>
-		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
-			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="index_l">
-			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
-			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
+		<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108133518-89402.png" class="img-responsive" /></a>
+		<a id="list1"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108133700-80002.png" class="img-responsive" /></a>
+		<a id="list2"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108133732-54691.png" class="img-responsive" /></a>
+		<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108133821-10250.png" class="img-responsive" />
+		<a id="list3"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108134823-20926.png" style="width: 50%;" class="pull-left" /></a>
+		<a id="list4"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108134954-25254.png" style="width: 50%;" class="pull-left" /></a>
 
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
+		<a id="list5"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135125-80877.png" style="width: 50%;" class="pull-left" /></a>
+		<a id="list6"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135142-84466.png" style="width: 50%;" class="pull-left" /></a>
 
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
+		<a id="list7"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135216-17556.png" style="width: 50%;" class="pull-left" /></a>
+		<a id="list8"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135231-35837.png" style="width: 50%;" class="pull-left" /></a>
 
-					</div>
-				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
+		<a id="list9"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135310-86580.png" style="width: 50%;" class="pull-left" /></a>
+		<a id="list10"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135329-98976.png" style="width: 50%;" class="pull-left" /></a>
 
-		</div>
-		<!--#include file="/common/toastDialog.html"-->
-		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
-		<script src="/assets/js/layer/layer.js"></script>
-		<script src="/assets/js/login/index.js"></script>
+		<a id="list11"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135345-79683.png" style="width: 50%;" class="pull-left" /></a>
+		<a id="list12"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135415-70093.png" style="width: 50%;" class="pull-left" /></a>
+
+		<a id="list13"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135430-96068.png" style="width: 50%;" class="pull-left" /></a>
+		<a id="list14"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135511-41194.png" style="width: 50%;" class="pull-left" /></a>
+
+		<a id="list15"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135545-13472.png" style="width: 50%;" class="pull-left" /></a>
+		<a id="list16"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135601-98178.png" style="width: 50%;" class="pull-left" /></a>
+
+		<a id="list17"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135627-35338.png" style="width: 50%;" class="pull-left" /></a>
+		<a id="list18"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135639-68574.png" style="width: 50%;" class="pull-left" /></a>
+
+		<a id="list19"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135705-61230.png" style="width: 50%;" class="pull-left" /></a>
+		<a id="list20"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171108135717-25856.png" style="width: 50%;" class="pull-left" /></a>
 		<script>
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+			
 			$(function() {
-				var pids = "";
-
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
+					
+				var code = GetQueryString('code');
+				if(IdValStrnigs(code)) {
+					code = 'jpsh';
 				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
-				}
+			
+				$("#list1").attr("href", '/product/goods/details.html?c=121&cp=1123&re=0&code=' + code);
+				$("#list2").attr("href", '/product/goods/details.html?c=9b366357-abac-486c-a3e2-0d5c22364bc8&cp=170a7926-8ff0-4fd8-a1e8-49c54764976b&re=0&code=' + code);
+				$("#list3").attr("href", '/product/goods/details.html?c=116&cp=1118&re=0&code=' + code);
+				$("#list4").attr("href", '/product/goods/details.html?c=132&cp=1138&re=0&code=' + code);
+				$("#list5").attr("href", '/product/goods/details.html?c=127&cp=1133&re=0&code=' + code);
+				$("#list6").attr("href", '/product/goods/details.html?c=128&cp=1134&re=0&code=' + code);
+	
+				$("#list7").attr("href", '/product/goods/details.html?c=129&cp=1135&re=0&code=' + code);
+				$("#list8").attr("href", '/product/goods/details.html?c=130&cp=1136&re=0&code=' + code);
+	
+				$("#list9").attr("href", '/product/goods/details.html?c=117&cp=1119&re=0&code=' + code);
+				$("#list10").attr("href", '/product/goods/details.html?c=115&cp=1117&re=0&code=' + code);
+	
+				$("#list11").attr("href", '/product/goods/details.html?c=118&cp=1120&re=0&code=' + code);
+				$("#list12").attr("href", '/product/goods/details.html?c=119&cp=1121&re=0&code=' + code);
+	
+				$("#list13").attr("href", '/product/goods/details.html?c=cc7a77bb-ec6c-440b-9a62-06571f073c14&cp=1362f0e6-434e-4531-b77c-ad6cd9248421&re=0&code=' + code);
+				$("#list14").attr("href", '/product/goods/details.html?c=499a8de7-fa28-4d76-9652-1467f790beac&cp=8779ffaf-72b1-4d55-ab42-c357dde73ba2&re=0&code=' + code);
+	
+				$("#list15").attr("href", '/product/goods/details.html?c=123&cp=1129&re=0&code=' + code);
+				$("#list16").attr("href", '/product/goods/details.html?c=126&cp=1132&re=0&code=' + code);
+	
+				$("#list17").attr("href", '/product/goods/details.html?c=120&cp=1122&re=0&code=' + code);
+				$("#list18").attr("href", '/product/goods/details.html?c=122&cp=1128&re=0&code=' + code);
+	
+				$("#list19").attr("href", '/product/goods/details.html?c=113&cp=1114&re=0&code=' + code);
+				$("#list20").attr("href", '/product/goods/details.html?c=114&cp=1116&re=0&code=' + code);
+				
+				$('#menu_img').val("https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171109094410-49008.png"); //	分享图片
+				$('#menu_title').val("单身月 让人不再孤单"); //	分享名字
+				$('#menu_desc').val("11.11,剁手根本停不下来。"); //	分享名字
+				$('#menu_url').val('https://wap.goldnurse.com/activity/eleven.html?code=' + code); //	分享链接
+				// 加载分享按钮功能
+				/*if(isWeiXin()) {
+					setWchatCallback();
+				}*/
 			})
-
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
-
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
-				}
-
-			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
-				}
-
-			}
-
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
-			}
-
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
-			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
-			}
 		</script>
 	</body>
 

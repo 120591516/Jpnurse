@@ -3,189 +3,257 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title>确认订单</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
 	</head>
 
 	<body>
-		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
-				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
-				</span>
-				<span class="mui-tab-label mt-5">首页</span>
+		<section class="pb-50">
+			<div class="address_gl">
+				
+					<div class="public-cell" onclick="dizhiorder()">
+						<img src="/assets/img/goods/querendingdan_diaz.png" style="margin-bottom:30px;" />
+						<div class="public_primary" id="address">
+							<p class="address_p1" style="padding-top: 0;">
+								<span id="xd_names"><!--我我我--></span>
+								<span id="xd_phones"><!--1345671234--></span>
+							</p>
+							<p style="margin-bottom: 0;" id="xd_detailaddesss">
+								<!--北京，北京市，朝阳区，百子湾，广渠路沿海赛洛城12号楼504-->
+							</p>
+						</div>
+						<span class="public2-horn-45"></span>
+					</div>
+				
 			</div>
-			<div class="mui-tab-item" onclick="nurse()">
-				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
-				</span>
-				<span class="mui-tab-label mt-5">护士</span>
-			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
-				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
-				</span>
-				<span class="mui-tab-label mt-5">精选</span>
-			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
-				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
-				</span>
-				<span class="mui-tab-label mt-5">个人中心</span>
-			</div>
-		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
+			<div class="public-cell2 public-cell-0 gwc mt-10" id="oneImg">
+
+				<div class="public_primary" style="padding-top: 0;">
+
 				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
 			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
+			<div class="public-cell much_goods mt-10" id="see">
+				<div class="public_primary" id="img">
+
 				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="index_l">
-			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
-			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
+				<span class="mr-10" onclick="see()">
+					共<span id="count"></span>件商品
+				</span>
+				<span class="public2-horn-45">					
+				</span>
 
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
+			</div>
+			<div class="public-cell public-cell-left color mt-10">
+				<div class="public_primary">
+					<h1>配送方式</h1>
+					<div style="display: none;">
+						<input id="commodityIds" />
+						<input id="cpIds" />
+						<input id="userAddressId" />
 					</div>
 				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
+				<span class="peisong_color">快递&nbsp;&nbsp;&nbsp;免邮费</span>
+			</div>
+			<div class="public-cell order-yhj  public-cell-left" style="display: none;">
+				<div class="public_primary">
+					<span>优惠券</span>
+					<span id="yhj_keyong">一张可用</span>
 				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
+				<span class="order-c-y">未使用</span>
+				<span class="public2-horn-45"></span>
+			</div>
+			<div class="order_text">
+				<textarea id="remark" placeholder="如有特殊要求请留言(支持两百字)"></textarea>
+			</div>
+		</section>
+		<div class="hs_footer">
 
+			<div class="hs_footer_div1">实付款：<i id="money">￥298</i></div>
+			<div class="hs_footer_div2"><button type="button" onclick="toPay()">去支付</button></div>
 		</div>
-		<!--#include file="/common/toastDialog.html"-->
-		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
 		<script src="/assets/js/layer/layer.js"></script>
 		<script src="/assets/js/login/index.js"></script>
 		<script>
+			var path = basePath();
 			$(function() {
-				var pids = "";
 
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
+				var userId = getUserId();
+
+				//var id = JSON.parse(localStorage.getItem("coId"));
+				//var cpId = JSON.parse(localStorage.getItem("cpId"));
+				var id = getlocalStorage("coId");
+				var cpId = getlocalStorage("cpId");
+				var storage = window.localStorage;
+				
+				param = {
+					userId: userId,
 				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
+
+				if(!localStorageIsNotnull("xd_addsId")) {
+
+					var xd_addsId = getlocalStorage("xd_addsId");
+					var xd_name = getlocalStorage("xd_name");
+					var xd_phone = getlocalStorage("xd_phone");
+					var xd_addess = getlocalStorage("xd_addess");
+					var xd_detailaddess = getlocalStorage("xd_detailaddess");
+
+					document.getElementById('xd_names').innerHTML = xd_name;
+					document.getElementById('xd_phones').innerHTML = xd_phone;
+					document.getElementById('xd_detailaddesss').innerHTML = xd_addess + xd_detailaddess;
+					document.getElementById("userAddressId").value = xd_addsId;
+
+				} else {
+					sendAjaxTrue(address_list, param, "json", function(data) {
+						var list = data.result;
+						 
+						if(list.length == 0) {
+							document.getElementById('address').innerHTML = "<p style='font-size: 16px;float: right;'>请先填写收货地址&nbsp;&nbsp;&nbsp;&nbsp;</p>";
+							return;
+						}
+						var detailaddress = list[0].province + list[0].city + list[0].area + list[0].detailaddress;
+						var address = "<p class='address_p1' style='padding-top: 0;'>" +
+							"<span>" + list[0].name + "</span>" +
+							"<span>" + list[0].phone + "</span>" +
+							"</p>" +
+							"<p style='margin-bottom: 0;'>" + detailaddress + "</p>";
+
+						document.getElementById("address").innerHTML = address;
+						document.getElementById("userAddressId").value = list[0].id;
+
+					})
 				}
+
+				  /* var userInfo = getlocalStorage("set");
+				   var localRe = getlocalStorage("re");
+				   var localCoId = getlocalStorage("coId");
+				   var localCpId = getlocalStorage("cpId");
+				   var localNumber = getlocalStorage("number");
+				   var localCode = getlocalStorage("code");
+				   
+				    var userOpenID = '';
+					   if(!localStorageIsNotnull("userOpenID")){
+					   	userOpenID = getlocalStorage("userOpenID");
+					   }
+				   localStorage.clear();
+				   
+				   if(!IdValStrnigs(userOpenID)){
+				   		setlocalStorage('userOpenID',userOpenID);
+				   }
+				   setlocalStorage("set",userInfo);
+				   
+				   setlocalStorage("re",localRe);
+				   setlocalStorage("coId",localCoId);
+				   setlocalStorage("cpId",localCpId);
+				   setlocalStorage("code",localCode);
+				   setlocalStorage("number",localNumber);*/
+				   clearLocalStorage(7);
+				 
+//				for(var i = 0; i < storage.length; i++) {
+//					var key = storage.key(i);
+//					if(key != 'set' && key != 'goodsId' && key != 'coId' && key != 'cpId' && key != 'number' && key != 're') {
+//						removeLocalStorage(key);
+//						i = -1;
+//					}
+//				}
+					   
+			 
+				param2 = {
+					commodityId: id,
+					cpId: cpId,
+					siteId:site,
+
+				}
+				sendAjaxTrue(oneGoodsDetail, param2, "json", function(data) {
+					
+					var result = data.result;
+					var img = "";
+					var money = "";
+					var cpIds = "";
+					var commodityIds = "";
+
+					var title = "";
+					if(result.title.length > 13) {
+						title = result.title.substring(0, 13) + "…";
+					} else {
+						title = result.title;
+					}
+					$("#img").hide();
+					$("#see").hide();
+					var oneImg = "";
+					oneImg = "<img src='" + result.commodityImages.url + "' />" +
+						"<div class='public_primary' style='padding-top: 0;'>" +
+						"<h1>" + title + " </h1>" +
+						"<div class='mt-10 gwc_p_color'> " + result.commodityPrice[0].name + " <span style='font-size: 16px;color: red;float:right' id ='number'>x" + getlocalStorage("number") + "</span></div>" +
+						"<p>￥" + result.commodityPrice[0].price + "</p >" +
+						"</div>";
+					document.getElementById("oneImg").innerHTML = oneImg;
+
+					document.getElementById("money").innerHTML = "￥" + changeTwoDecimal_f(result.commodityPrice[0].price * getlocalStorage("number"));
+
+					document.getElementById("commodityIds").value = result.id;
+					document.getElementById("cpIds").value = result.commodityPrice[0].id;
+
+				})
 			})
 
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
-
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
+			function toPay() {
+				var userId = getUserId();
+				var creatorId = GetRequest()['creatorId'];
+				var ids = GetRequest()['ids'];
+				var commodityIds = document.getElementById("commodityIds").value;
+				var cpIds = document.getElementById("cpIds").value;
+				var userAddressId = document.getElementById("userAddressId").value;
+				var remark = document.getElementById("remark").value;
+				var payPrice = document.getElementById("money").innerHTML.substr(1);
+				var number = document.getElementById("number").innerHTML.substr(1);
+				var re = getlocalStorage("re");
+				var code = getlocalStorage("code");
+				if(userAddressId == "") {
+					layer.msg("请先填写收货地址！", { time: 1000 });
+					return;
 				}
 
-			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
+				param3 = {
+					userId: userId,
+					commodityIds: commodityIds,
+					cpIds: cpIds,
+					userAddressId: userAddressId,
+					carIds: ids,
+					remark: remark,
+					carIds: "",
+					number: number,
+					code : code,
 				}
 
+				setlocalStorage("commodityIds", commodityIds);
+				setlocalStorage("cpIds", cpIds);
+				setlocalStorage("userAddressId", userAddressId);
+				setlocalStorage("carIds", ids);
+				setlocalStorage("remark", remark);
+				setlocalStorage("number", number);
+				setlocalStorage("payPrice", payPrice);
+				setlocalStorage("serviceAndGoodsType", 2);
+				setlocalStorage("carIds", '');
+				setlocalStorage("code", code);
+				location.href = path+"/product/pay.html";
+
+				/*sendAjaxTrue(createOrder, param3, "json", function(data) {
+					if(data.resultcode == 1) {
+
+					}
+				})*/
 			}
 
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
-			}
+			function see() {
+				var ids = GetRequest()['ids'];
+				location.href = "./goodList.html?ids=" + ids;
 
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
 			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
+			function dizhiorder(){
+				location.href =path+'/personal/address/index.html?orderXtype=5';
 			}
 		</script>
 	</body>

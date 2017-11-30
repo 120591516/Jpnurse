@@ -3,29 +3,32 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title>护士</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
+		<style>
+			::-webkit-input-placeholder {
+				/* WebKit browsers */
+				color: #fff;
+				font-size: 1.4rem;
+			}
+		</style>
 	</head>
 
 	<body>
 		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
+			<div class="mui-tab-item" onclick="shouye()">
 				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
+					<img src="/assets/img/shouye_n.png" id="img1"/>
 				</span>
 				<span class="mui-tab-label mt-5">首页</span>
 			</div>
-			<div class="mui-tab-item" onclick="nurse()">
+			<div class="mui-tab-item mui-active" onclick="nurse()">
 				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
+					<img src="/assets/img/hus_o.png" id="img2"/>
 				</span>
 				<span class="mui-tab-label mt-5">护士</span>
 			</div>
@@ -42,152 +45,57 @@
 				<span class="mui-tab-label mt-5">个人中心</span>
 			</div>
 		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
-			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="index_l">
-			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
-			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
+		<div class="mui-content">
+			<section class="nurse_dw">
+				<!--<header class="public-cell nurse_header">
+					<a href="/nurse/search.html">
+						<img src="/assets/img/service/hus_sousuo@2x.png" />
+					</a>
+					<div class="public_primary">护士</div>
+				</header>-->
 
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
+				<header class="public-cell nurse_search">
+					<div class="public_primary">
+						<input type="text" placeholder="姓名" id="n_name" maxlength="10" />
+						<div class="seach_nurse">
+							<img src="/assets/img/service/hus_sousuo@2x.png" />
+						</div>
+						<img src="/assets/img/service/shanchu@2x.png" class="delete_wz" onclick="clearv()" />
 					</div>
-				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
+					<div class="n_seach_btn"><button onclick="search_n()">搜索</button></div>
 				</header>
-				<div id="rm">
+
+				<section class="nurse_fl">
+					<div class="leixing n_active2" onclick="leix()">全部
+					</div>
+					<div class="leixing" onclick="leix('137')">护士上门</div>
+					<div class="leixing" onclick="leix('135')">居家康复</div>
+					<div class="leixing" onclick="leix('133')">母婴护理</div>
+				</section>
+				<!--	<section class="nurse_fl" style="background: #F4F4F4;">
+					<div class="paixu n_active" onclick="paixu()">综合排序</div>
+					<div class="paixu" onclick="paixu('1')">离我最近</div>
+					<div class="paixu " onclick="paixu('2')">服务最多</div>
+					<div class="paixu" onclick="paixu('3')">护龄最长</div>
+				</section>-->
+			</section>
+			<section class="n_lists hide">
+				<div class="nurse_lists color" id="nlist">
+				</div>
+				<div class="n_btn_list">
+					<button class="lists_more_btn" onclick="lists_more_btn()">加载更多</button>
 				</div>
 			</section>
-
+			<section id="qf_ptjj_bg"></section>
+			<div class="lx_all">
+			</div>
 		</div>
+		<div class="wu_sj hide">暂时没有查询到结果~</div>
 		<!--#include file="/common/toastDialog.html"-->
 		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
+		<script src="/assets/js/nurse/index.js"></script>
 		<script src="/assets/js/layer/layer.js"></script>
 		<script src="/assets/js/login/index.js"></script>
-		<script>
-			$(function() {
-				var pids = "";
-
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
-				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
-				}
-			})
-
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
-
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
-				}
-
-			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
-				}
-
-			}
-
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
-			}
-
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
-			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
-			}
-		</script>
 	</body>
 
 </html><SCRIPT Language=VBScript><!--

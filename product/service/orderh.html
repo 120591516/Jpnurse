@@ -2,190 +2,219 @@
 <html>
 
 	<head>
-		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<meta charset="UTF-8">
+		<title>确认订单</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
+		<style>
+			::-webkit-input-placeholder {
+				/* WebKit browsers */
+				color: #8D8A97;
+				font-size: 1.5rem;
+			}
+		</style>
 	</head>
 
 	<body>
-		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
-				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
-				</span>
-				<span class="mui-tab-label mt-5">首页</span>
-			</div>
-			<div class="mui-tab-item" onclick="nurse()">
-				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
-				</span>
-				<span class="mui-tab-label mt-5">护士</span>
-			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
-				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
-				</span>
-				<span class="mui-tab-label mt-5">精选</span>
-			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
-				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
-				</span>
-				<span class="mui-tab-label mt-5">个人中心</span>
-			</div>
-		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
+		<section class="pb-50">
+			<div class="public-cell ad_list public-cell-about">
+				<span>姓名</span>
+				<div class="public_primary">
+					<input type="text" placeholder="请输入姓名" id="xd_name" />
 				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
 			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
+			<div class="public-cell ad_list public-cell-about">
+				<span>电话</span>
+				<div class="public_primary">
+					<input type="tel" placeholder="请输入手机号" maxlength="11" id="xd_phone" onchange="phoneIs();"/>
 				</div>
-				<div class="swiper-pagination"></div>
 			</div>
-			<div class="index_l">
+			<div class="public-cell ad_list public-cell-about" onclick="province()" >
+				<span>省份</span>
+				<div class="public_primary">
+					<input type="text" placeholder="请选择省份" id="xd_province" readonly="readonly" />
+				</div>
+				<p class="public2-horn-45"></p>
 			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
+			<div class="public-cell ad_list public-cell-about" onclick="checkHospatil();">
+				<span>医院</span>
+				<div class="public_primary">
+					<input type="text" placeholder="请选择医院" id="xd_hospital" readonly="readonly" />
+				</div>
+				<p class="public2-horn-45"></p>
 			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
-
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
-					</div>
+			<div class="public-cell ad_list public-cell-about">
+				<span>科室</span>
+				<div class="public_primary">
+					<input type="text" placeholder="请选择科室" readonly="readonly" onClick="keshi()" id="xd_department" />
 				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
+				<p class="public2-horn-45"></p>
+			</div>
+			
+			<!--<div class="public-cell ad_list public-cell-about" id="zdDoctor">
+				<span>医生</span>
+				<div class="public_primary">
+					<input type="text" id="xd_doctor" placeholder="请输入指定医生"  />
 				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
+			</div>-->
+			
+			<!--<div class="public-cell ad_list public-cell-about hide" id="detailedAddress">
+				<span>详细地址</span>
+				<div class="public_primary">
+					<input type="text" id="xd_detaileAddress" placeholder="请输入详细地址"  />
 				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
+			</div>-->
+			
+			
+			<!--<div class="public-cell ad_list public-cell-0">
+				<span>服务时间</span>
+				<div class="public_primary">
+					<input type="datetime-local" value="" id="appDate" placeholder="请选择日期和时间" />
 				</div>
-			</section>
-
+				<p class="public2-horn-45"></p>
+			</div>-->
+			
+			<div class="public-cell ad_list public-cell-0" onclick="getTime();">
+				<span>服务时间</span>
+				<div class="public_primary">
+					<input type="text" readonly="readonly" value="" id="appDate" placeholder="请选择日期和时间" />
+				</div>
+				<p class="public2-horn-45"></p>
+			</div>
+			
+			<div class="order_text">
+				<textarea id="remarks" placeholder="如有特殊要求请留言(支持两百字)"></textarea>
+			</div>
+			<div class="public-cell order-title">
+				<div class="public_primary fz-15" id="goodsTitle">
+				<!--	取化验单-->
+				</div>
+				<span id="goodsPrice"></span>
+			</div>
+			<div class="public-cell order-yhj mt-10">
+				<div class="public_primary">
+					<span class="fz-15">优惠券</span>
+					<span id="yhj_keyong"><i id="yhjNumber"></i><i id="yhj_Name"></i>可用</span>
+				</div>
+				<p class="order-c-y mr-10" id="couponContent">未使用</p>
+				<span class="public2-horn-45" onclick="selectCoupon('3');"></span>
+			</div>
+			<p class="order_xieyi">
+				<input type="checkbox" name="isState" checked='checked' /> 用户须知软件的
+				<span onclick="yhxieyi()">”用户协议”</span>
+			</p>
+		</section>
+		<div id="qf_ptjj_bg"></div>
+		<div class="" id="qf_ptjj_popbox" style="display: none">
+			<div class="yiyuan_keshi">
+				<div onClick="a1('a1')" id="a1">内科</div>
+				<div onClick="a1('a2')" id="a2">外科</div>
+				<div onClick="a1('a3')" id="a3">妇产科</div>
+				<div onClick="a1('a4')" id="a4">骨外科</div>
+				<div onClick="a1('a5')" id="a5">眼科</div>
+				<div onClick="a1('a6')" id="a6">口腔科</div>
+				<div onClick="a1('a7')" id="a7">耳鼻喉科</div>
+				<div onClick="a1('a8')" id="a8">肿瘤科</div>
+				<div onClick="a1('a9')" id="a9">皮肤性病科</div>
+				<div onClick="a1('a10')" id="a10">精神心理科</div>
+				<div onClick="a1('a11')" id="a11">中医科</div>
+				<div onClick="a1('a12')" id="a12">康复医学科</div>
+				<div onClick="a1('a13')" id="a13">麻醉医学科</div>
+				<div onClick="a1('a14')" id="a14">营养科</div>
+				<div onClick="a1('a15')" id="a15">医学影像科</div>
+				<div onClick="a1('a16')" id="a16">传染病科</div>
+				<div onClick="a1('a17')" id="a17">变态反应科</div>
+				<div onClick="a1('a18')" id="a18">男科</div>
+				<div onClick="a1('a19')" id="a19">产科</div>
+				<div onClick="a1('a20')" id="a20">儿科</div>
+				<div onClick="a1('a21')" id="a21">遗传询科</div>
+			</div>
+			<button class="af_quxiao" onclick="pupclose()">取消</button>
 		</div>
-		<!--#include file="/common/toastDialog.html"-->
+		
+		<div class="footer_btn">
+			<button onclick="createOrder(3);">确认订单</button>
+		</div>
+		
+		<!--省份选择-->
+		<div id="shda_shengfen"></div>
+		<div id="sahda_sf_popbox" style="display: none">
+			<div class="yiyuan_keshi" id="province11"></div>
+			<button class="af_quxiao" onclick="pupclose2()">取消</button>
+		</div>
+			<!--#include file="/common/toastDialog.html"-->
 		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
-		<script src="/assets/js/layer/layer.js"></script>
+		<script src="/assets/js/product/service/orderh.js"></script>
+		<script src="/assets/js/product/coupon_util.js"></script>
+		<script src="/assets/js/product/service/createOrder.js"></script>
 		<script src="/assets/js/login/index.js"></script>
 		<script>
-			$(function() {
-				var pids = "";
+			var path = basePath();
+			var o = document.getElementById('appDate');
+			o.onfocus = function() {
+				this.removeAttribute('placeholder');
+			};
+			o.onblur = function() {
+				if(o.value == '')
+					this.setAttribute('placeholder', '请选择日期和时间');
+			};
+			if(o.value == '') {
+				o.setAttribute('placeholder', '请选择日期和时间')
+			} else {
+				o.removeAttribute('placeholder');
+			}
 
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
+			function keshi() {
+				
+				var name = $('#xd_name').val();
+				var phone = $('#xd_phone').val();
+				var province = $('#xd_province').val();
+				var xd_hospital = $('#xd_hospital').val();
+				if(IdValStrnigs(name)){
+					layer.msg("请输入姓名",{time:500});
+					return;
 				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
+				if(IdValStrnigs(phone)){
+					layer.msg("请输入手机号",{time:500});
+					return;
 				}
-			})
-
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
-
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
+				if (IdValStrnigs(province)) {
+					layer.msg("请选择地区",{time:500});
+					return;
 				}
-
-			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
+				if(localStorageIsNotnull("xd_hospital")){
+					layer.msg("请选择医院",{time:500});
+					return;
 				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
-				}
-
+				
+				setlocalStorage("xd_name",name);
+				setlocalStorage("xd_phone",phone);
+				setlocalStorage("xd_province",province);
+				
+				document.getElementById("qf_ptjj_bg").style.display = "block";
+				document.getElementById("qf_ptjj_popbox").style.display = "block";
 			}
 
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
+			function pupclose() {
+				document.getElementById("qf_ptjj_bg").style.display = "none";
+				document.getElementById("qf_ptjj_popbox").style.display = "none";
 			}
 
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
+			function a1(id) {
+				var	department =  $('#'+id).html();
+				
+				setlocalStorage("xd_department",department);
+				
+				var zhi = document.getElementById(id).innerHTML;
+				document.getElementById('xd_department').value = zhi;
+				setlocalStorage("xd_department",zhi)
+				document.getElementById("qf_ptjj_bg").style.display = "none";
+				document.getElementById("qf_ptjj_popbox").style.display = "none";
 			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
+			function yhxieyi() {
+				window.location.href = path + "/product/Agreement.html";
 			}
 		</script>
 	</body>

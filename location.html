@@ -3,129 +3,53 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title>定位</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
 	</head>
 
 	<body>
-		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
-				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
-				</span>
-				<span class="mui-tab-label mt-5">首页</span>
-			</div>
-			<div class="mui-tab-item" onclick="nurse()">
-				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
-				</span>
-				<span class="mui-tab-label mt-5">护士</span>
-			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
-				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
-				</span>
-				<span class="mui-tab-label mt-5">精选</span>
-			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
-				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
-				</span>
-				<span class="mui-tab-label mt-5">个人中心</span>
-			</div>
-		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
-			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="index_l">
-			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
-			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
-
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
-					</div>
-				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
-
+		<p style="background: #FBFBFB;" class="index_dw">定位城市</p>
+		<div class="dw_city pt-5 pb-5">
+			<button id="index_city" class="city_dw"></button>
 		</div>
-		<!--#include file="/common/toastDialog.html"-->
-		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
+		<p style="background: #FBFBFB;" class="index_dw">热门城市</p>
+		<div class="dw_city pt-5 pb-5" id="remencity">
+			<!--<button class="city_dw">北京市</button>
+			<button class="city_dw">上海市</button>
+			<button class="city_dw">广州市</button>
+			<button class="city_dw">深圳市</button>-->
+		</div>
+		<!--<p style="background: #FBFBFB;" class="index_dw"> B</p>-->
+		<div class="citylist color">
+			<!--		<p class="citylist_p city_dw">北京市</p>
+			<p class="citylist_p city_dw">成都市</p>
+			<p class="citylist_p city_dw">大连市</p>
+			<p class="citylist_p city_dw">福州市</p>
+			<p class="citylist_p city_dw">广州市</p>
+			<p class="citylist_p city_dw">哈尔滨市</p>
+			<p class="citylist_p city_dw">杭州市</p>
+			<p class="citylist_p city_dw">济南市</p>
+			<p class="citylist_p city_dw">南京市</p>
+			<p class="citylist_p city_dw">青岛市</p>
+			<p class="citylist_p city_dw">厦门市</p>
+			<p class="citylist_p city_dw">上海市</p>
+			<p class="citylist_p city_dw">深圳市</p>
+			<p class="citylist_p city_dw">沈阳市</p>
+			<p class="citylist_p city_dw">苏州市</p>
+			<p class="citylist_p city_dw">天津市</p>
+			<p class="citylist_p city_dw">武汉市</p>
+			<p class="citylist_p city_dw">西安市</p>
+			<p class="citylist_p city_dw">长春市</p>
+			<p class="citylist_p city_dw">长沙市</p>
+			<p class="citylist_p city_dw">郑州市</p>
+			<p class="citylist_p city_dw">重庆市</p>-->
+		</div>
 		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
-		<script src="/assets/js/layer/layer.js"></script>
-		<script src="/assets/js/login/index.js"></script>
 		<script>
-			$(function() {
-				var pids = "";
-
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
-				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
-				}
-			})
-
+			var path = basePath();
 			var _script = document.createElement('script');
 			_script.type = "text/javascript";
 			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
@@ -133,60 +57,35 @@
 			document.head.appendChild(_script);
 
 			function citycallback(data) {
-				console.log(data);
 				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
+				$("#index_city").html(city);
+			}
+			$(function() {
+				sendAjaxTrue(cityxuanze, "", "json", citycallback);
+
+				function citycallback(data) {
+					var cityhtmls = [];
+					var rmcity = [];
+					$.each(data.result, function(i, item) {
+						if(item.type == 1) {
+							rmcity += [
+								'<button class="city_dw">'+ item.name +'</button>'
+							].join("");
+						}
+						cityhtmls += [
+							'<p class="citylist_p city_dw">' + item.name + '</p>'
+						].join("");
+					});
+					$(".citylist").html(cityhtmls);
+					$("#remencity").html(rmcity);
+					$(".city_dw").click(function() {
+						var index_city = $(this).html();
+						sessionStorage.setItem("set_index_city", index_city)
+						window.location.href = path + "/index.html";
+
+					})
 				}
-
-			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
-				}
-
-			}
-
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
-			}
-
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
-			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
-			}
+			})
 		</script>
 	</body>
 

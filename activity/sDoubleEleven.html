@@ -3,190 +3,75 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title>双十一送你88元大红包</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
+		<style>
+			html,
+			body {
+				width: 100%;
+				background: #7F12DF;
+			}
+			
+			img {
+				display: block;
+			}
+			
+			.bg_list {
+				width: 100%;
+				position: relative;
+			}
+			
+			.bg_jb {
+				width: 64%;
+				position: absolute;
+				top: 3px;
+				left: 18%;
+			}
+			
+			.bg_jb img {
+				margin-bottom: 15px;
+			}
+		</style>
 	</head>
 
 	<body>
-		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
-				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
-				</span>
-				<span class="mui-tab-label mt-5">首页</span>
+		<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171110104122-80412.png" class="img-responsive" />
+		<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171110105123-32645.png" class="img-responsive" />
+		<div class="bg_list">
+			<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171110105452-61378.png" class="img-responsive" />
+			<div class="bg_jb">
+				<a id="list1"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171110110211-52803.png" class="img-responsive" /></a>
+				<a id="list2"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171110110513-71831.png" class="img-responsive" /></a>
+				<a id="list3"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171110110536-13173.png" class="img-responsive" /></a>
+				<a id="list4"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171110110551-77794.png" class="img-responsive" /></a>
+				<a id="list5"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171110110626-14833.png" class="img-responsive" /></a>
 			</div>
-			<div class="mui-tab-item" onclick="nurse()">
-				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
-				</span>
-				<span class="mui-tab-label mt-5">护士</span>
-			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
-				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
-				</span>
-				<span class="mui-tab-label mt-5">精选</span>
-			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
-				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
-				</span>
-				<span class="mui-tab-label mt-5">个人中心</span>
-			</div>
-		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
-			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="index_l">
-			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
-			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
-
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
-					</div>
-				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
-
 		</div>
-		<!--#include file="/common/toastDialog.html"-->
-		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
+		<div style="position: relative;">
+			<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171110105629-62711.png" class="img-responsive" />
+			<a href="/index.html"><img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171110114113-53364.png" style="width:40%;position: absolute; bottom: 15px;left: 30%;" /></a>
+		</div>
+
 		<script src="/assets/js/layer/layer.js"></script>
-		<script src="/assets/js/login/index.js"></script>
 		<script>
-			$(function() {
-				var pids = "";
-
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
-				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
-				}
-			})
-
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
-
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
-				}
-
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
 			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
+			var code = GetQueryString('code');
+			if(IdValStrnigs(code)) {
+				code = 'jpsh';
 			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
-				}
-
-			}
-
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
-			}
-
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
-			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
-			}
+			$("#list1").attr("href", '/product/service/details1.html?id=232&code=' + code);
+			$("#list2").attr("href", '/product/service/details1.html?id=234&code=' + code);
+			/*$("#list3").attr("href", '/product/service/details1.html?id=236&code=' + code);*/
+			$("#list4").attr("href", '/product/service/details1.html?id=238&code=' + code);
+			$("#list5").attr("href", '/product/service/details1.html?id=228&code=' + code);	
 		</script>
 	</body>
 

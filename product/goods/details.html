@@ -3,189 +3,451 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title id="title"></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
 	</head>
 
 	<body>
-		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
-				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
-				</span>
-				<span class="mui-tab-label mt-5">首页</span>
-			</div>
-			<div class="mui-tab-item" onclick="nurse()">
-				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
-				</span>
-				<span class="mui-tab-label mt-5">护士</span>
-			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
-				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
-				</span>
-				<span class="mui-tab-label mt-5">精选</span>
-			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
-				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
-				</span>
-				<span class="mui-tab-label mt-5">个人中心</span>
-			</div>
-		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
-			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="index_l">
-			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
-			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
-
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
-					</div>
-				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
-
+		
+		<div class="xuanfu_index" onclick="tzindex()">
+			首页
 		</div>
-		<!--#include file="/common/toastDialog.html"-->
-		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
-		<script src="/assets/js/layer/layer.js"></script>
-		<script src="/assets/js/login/index.js"></script>
-		<script>
-			$(function() {
-				var pids = "";
+		<section class="pb-50" id="body">
+			<div id="div1">
 
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
+			</div>
+			<div class="public-cell good_guige" style="display: none;">
+				<div class="public_primary">
+					<h1>商品规格</h1>
+				</div>
+				<span>...</span>
+			</div>
+			<div class="xq_g" id="detailImg">
+
+			</div>
+			<div class="tanchu hide" id="div2">
+
+			</div>
+		</section>
+		<div>
+			<footer class="good_foot">
+				<!--<div onclick="addCar()">加入购物车</div>
+				<div onclick="createOrder()" onclick="guige()">立即下单</div>-->
+				<div onclick="goCar()">
+					<p class="good_foot_img">
+						<img src="/assets/img/personal/gouwuche2.png" />
+						<span class="num_gwc" id="carNum"></span>
+					</p>
+					<p class="xq_gwc_p text-center">购物车</p>
+
+				</div>
+				<div onclick="guige(1)">加入购物车</div>
+				<div onclick="guige(2)">立即下单</div>
+			</footer>
+		</div>
+		<input id="commodityPriceId" type="hidden" style="" />
+		<input id="commodityId" type="hidden" />
+		<!--#include file="/common/toastDialog.html"-->
+		<script src="/assets/js/login/index.js"></script>
+		<script src="/assets/js/layer/layer.js"></script>
+		<script>	
+			var path = basePath();
+			function guige(chose) {
+				$(".tanchu").removeClass("hide");
+				$("body").css("overflow", "hidden");
+				$("body").css("position", "fixed");
+				//document.getElementById("ascertain").innerHTML = "<div onclick='guige()'>加入购物车</div>";
+				if(chose == 1) {
+					document.getElementById("ascertain").innerHTML = "<span><div onclick='addCar()' style='font-size: 16px;'>确定</div></span>";
+					carListNumber();
+				} else {
+					document.getElementById("ascertain").innerHTML = "<span><div onclick='createOrder()' style='font-size: 16px;'>确定</div></span>";
 				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
+			}
+
+			function tanchu_close() {
+				$(".tanchu").addClass("hide");
+				$("body").css("overflow", "auto");
+				$("body").css("position", "relative");
+				$(".st_goods_xz1 button").removeAttr("id", "st_goods_active");
+				$(".st_goods_xz1 button").eq(0).attr("id", "st_goods_active");
+				//	document.getElementById("ascertain").innerHTML = "<footer class='good_foot' ><div onclick='guige(1)'>加入购物车</div><div onclick='guige(2)'>立即下单</div></footer>";
+
+				document.getElementById("num").value = 1;
+			}
+
+			function leijia() {
+				var num = document.getElementById("num");
+				num.value = parseInt(num.value) + 1;
+			}
+
+			function leijian() {
+				var num = document.getElementById("num");
+				num.value = parseInt(num.value) - 1
+				if(num.value <= 1) {
+					num.value = 1
 				}
+			}
+
+			$(function() {
+
+				carListNumber();
+				var id = GetRequest()['c'];
+				var cpId = GetRequest()['cp'];
+				var userId = GetRequest()['re'];
+				var code = GetRequest()['code'];
+				if( userId == ""){
+					
+					userId= getlocalStorage("re");
+					if(userId == ""){
+						userId = 0;
+					}
+				}
+				if( code == ""){
+					code = getlocalStorage("code");
+					if(code == ""){
+						code = 0;
+					}
+				}
+				
+				 setlocalStorage("re",userId);
+				 setlocalStorage("code",code);
+				var param = {
+					columnId: "cb02ca72-1e9f-43c5-9940-8035486e7eb4",
+					commodityId: id,
+					re :userId,
+					siteId:site,
+				}
+				sendAjaxTrue(goodsDetail, param, "json", goodsDetailFunction)
 			})
 
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
+			function goodsDetailFunction(data) {
+				var result = data.result;
+				console.log(result);
+				var spec = result.commodityPrice;
+				var url = result.commodityImages.url;
+				var apType =result.apType;
+				var showUrl = apType=='0'?url:result.imageUrl;
+				var div1 = null;
 
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
+				var div2 = null;
+
+				var flag = "";
+
+				var name = "";
+
+				document.getElementById("commodityPriceId").value = spec[0].id;
+				document.getElementById("commodityId").value = result.id;
+
+				for(var i = 0; i < spec.length; i++) {
+					name += "<button onclick=chose(" + spec[i].price + ",'" + spec[i].id + "')>" + spec[i].name + "</button>";
+				}
+
+				if(result.quality == 1) {
+					flag += "<span><img src='/assets/img/goods/duihao.png' />正品保证</span>";
+				}
+				if(result.security == 1) {
+					flag += "<span><img src='/assets/img/goods/duihao.png'  />药检认证</span>";
+				}
+				if(result.privacy == 1) {
+					flag += "<span><img src='/assets/img/goods/duihao.png'  />隐私配送</span>";
+				}
+
+				
+				var hd = "<div class='seckill-floor'>"
+					+"<div class='seckil-price-wrap'>"
+					+"<div class='seckill-price'>¥ <span class='seckill-big-price'>238</span>.00</div>"
+					+"<div class='seckill-btm-div'>"
+					+"<span class='skf-icon-pos'>"
+					+"<i class='label-icon-div white-border have-icon-div'>"
+					+"<i class='label-icon seckill-floor-icon'></i>"
+					+"<span class='label-text white-text'>下单立减</span>"
+					+"</i>"
+					+"</span>"
+					+"<span class='skf-jdPrice'>¥558.00</span>"
+					+"<span class='skf-icon-pos ml-10'>"
+					+"<i class='label-icon-div white-border have-icon-div'>"
+					+"<i class='label-icon1 seckill-floor-icon'></i>"
+					+"<span class='label-text white-text'>首单立减</span>"
+					+"</i>"
+					+"	</span>"
+					+"</div>"
+					+"</div>"
+					 +"<div class='seckil-time-wrap'>"
+					 +"<span class='seckil-time-title'>距结束还剩:</span>"
+					 +"<div class='seckill-time-div' id='seckill_time'><span class='seckill-time-num'>22</span>"
+					 +"<span class='seckill-time-colon'>:</span><span class='seckill-time-num'>14</span>"
+					 +"<span class='seckill-time-colon'>:</span>"
+					 +"<span class='seckill-time-num'>35</span></div>"
+					+"</div>"
+					+"</div>";
+
+
+				div1 = "<div class='good_img'>" +
+					"<img src='" + showUrl + "'/>" +
+					//hd+
+					"</div>" +
+					"<div class='public-cell good_xq public-cell-left'>" +
+					"<div class='public_primary'>" +
+					"<h1>" + result.title + "<span id='showPrice'><s class='pull-right fz-15' style='margin-top:2px;margin-left:7px; color:#777777;font-weight:normal;'>￥" + result.commodityPrice[0].oldPrice + "</s><span class='pull-right'>￥<em>" + spec[0].price + "</em></span></span></h1>" +
+					"<p>" + result.subTitle + "</p>" +
+					"</div>" +
+					"</div>" +
+					"<div class='good_fl'>" +
+					flag +
+					"</div>";
+
+				document.getElementById("title").innerHTML = result.title;
+
+				document.getElementById("div1").innerHTML = div1;
+
+				div2 = "<div class='tanchu_div'>" +
+					"<p class='tanchu_close' onclick='tanchu_close()'>×</p>" +
+					"<div class='public-cell2 public-cell-0 gwc'>" +
+					"<img src='" + url + "' class='mt-10'/>" +
+					"<div class='public_primary'>" +
+					"<h1 >" + result.title + "</h1>" +
+					"<p id='price'>￥" + spec[0].price + "</p>" +
+					"</div>" +
+					"</div>" +
+					"<div class='good_ys'>" +
+					"<h1>规格</h1>" +
+					"<p class='st_goods_xz1'>" +
+					name +
+					"</p>" +
+					"</div>" +
+					"<div class='public-cell gwc_num mb-10'>" +
+					"<span>数量</span>" +
+					"<div class='public_primary'>" +
+					"<div onclick='leijia()'>+</div>" +
+					"<input onchange='changeNum()' onkeyup=this.value=this.value.replace(/[^0-9]/g,'') onafterpaste=this.value=this.value.replace(/[^0-9]/g,'')  type='text' value='1' id='num' />" +
+					"<div onclick='leijian()'>-</div>" +
+					"</div>" +
+					"</div><div id='ascertain' class='qd_btn'><span>确定</span></div>" +
+					"</div>";
+				if(apType!='0'){
+					$('#showPrice').hide();
+				}
+				document.getElementById("div2").innerHTML = div2;
+				document.getElementById("detailImg").innerHTML = result.detailUrl;
+				$(".st_goods_xz1 button").click(function() {
+					$(".st_goods_xz1 button").removeAttr("id", "st_goods_active");
+					$(this).attr("id", "st_goods_active");
+				})
+				$(".st_goods_xz1 button").eq(0).attr("id", "st_goods_active");
+			
+			var re = getlocalStorage("re");
+			var code = getlocalStorage("code");
+			
+			 // 加载分享按钮功能
+			$('#menu_img').val(url);								//	分享图片
+			$('#menu_title').val(result.title);						//	分享名字
+			$('#menu_desc').val(result.subTitle);
+			$('#menu_url').val('https://wap.goldnurse.com'+path+'/product/goods/details.html?c='+result.id+'&cp='+spec[0].id +'&re=' +re+ '&code='+code);	//	分享链接
+			 
+				// 加载分享按钮功能
+				/*if(isWeiXin()){
+					setWchatCallback();
+				}*/
+			
+			}
+
+			function chose(price, id) {
+
+				document.getElementById("price").innerHTML = "￥" + price;
+				document.getElementById("commodityPriceId").value = id;
+			}
+
+			function addCar() {
+				
+				var cpId = GetRequest()['cp'];
+				var coId = GetRequest()['c'];
+				var re = getlocalStorage("re");
+				var code = getlocalStorage("code");
+				var userId = getUserId();
+				 if(userId == null || userId == "") {
+					setlocalStorage("returnLoginURL",path+"/product/goods/details.html?c="+coId +"&cp="+cpId+"&re="+getlocalStorage("re")+"&code="+getlocalStorage("code"));
+					window.location.href =path+"/login/loginAmong.html";
+				} 
+				var carNum = document.getElementById("carNum").innerHTML;
+				var number = 1;
+				if(document.getElementById("num").value != ""){
+					number = document.getElementById("num").value;
+				}
+
+				var commodityPriceId = document.getElementById("commodityPriceId").value;
+				var commodityId = document.getElementById("commodityId").value;
+				 
+				var param = {
+					commodityId: commodityId,
+					commodityPriceId: commodityPriceId,
+					number: number,
+					creatorId: userId,
+					userId: re,
+					code : code,
+				}
+				//$(".tanchu").addClass("hide");
+				 tanchu_close();
+				sendAjaxTrue(insertCar, param, "json", function(data) {
+					console.log(data);
+					if(data.resultcode == 1) {
+						layer.msg("添加成功", { time: 2000 });
+						carListNumber();
+					} else {
+						layer.msg("添加失败", { time: 2000 });
+					}
+				}) 
+
+			}
+
+			function createOrder() {
+				clearLocalStorage(7);
+				var id = document.getElementById("commodityId").value;
+				var cpId = document.getElementById("commodityPriceId").value;
+				var num = document.getElementById("num").value;
+				var re = GetRequest()['re'];
+				setlocalStorage("re", re);
+				setlocalStorage("coId", id);
+				setlocalStorage("cpId", cpId);
+				setlocalStorage("number", num);
+				setlocalStorage("re", re);
+				var userId = getUserId();
+				if(!userProving()) {
+					setlocalStorage("returnLoginURL",path+"/product/goods/details.html?c="+getlocalStorage("coId") +"&cp="+getlocalStorage("cpId")+"&re="+getlocalStorage("re")+"&code="+getlocalStorage("code"));
+					window.location.href = path+"/login/loginAmong.html";
 				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
+//					location.href = "./oneOrder.html?id=" + id + "&cpId=" + cpId;
+						
+						var param = {
+							commodityId: id,
+							commodityPriceId: cpId,
+							number: num,
+							creatorId: userId,
+							userId: re,
+							code : getlocalStorage("code"),
+							type: 2,
+						}
+						sendAjaxTrue(insertCar, param, "json", function(data) {
+							console.log(data);
+							if(data.resultcode == 1) {
+								setlocalStorage("ids", data.result);
+								location.href = "./order.html?creatorId=" + userId + "&ids=" + data.result;
+							
+							} else {
+								layer.msg("添加失败", { time: 2000 });
+							}
+						}) 
+						
 				}
 
 			}
 
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
+			function goCar() {
 
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
 
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
+				var cpId = GetRequest()['cp'];
+				var coId = GetRequest()['c'];
+				
+			 	var userId = getUserId();
+				if(!userProving()) {
+					setlocalStorage("returnLoginURL",path+"/product/goods/details.html?c="+coId +"&cp="+cpId+"&re="+getlocalStorage("re")+"&code="+getlocalStorage("code"));
+					window.location.href = path+"/login/loginAmong.html";
 				} else {
-					window.location.href = path + '/product/custom/customServer.html';
+					location.href = "./shopping.html";
 				}
 
+				// location.href = "./shopping.html";
 			}
 
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
+			function carListNumber() {
+				var userId = getUserId();
+				if(userId == null || userId == "") {
+					document.getElementById("carNum").innerHTML = 0;
+					document.getElementById("carNum").classList.remove("num_gwc");
+				} else {
+					var param = {
+						creatorId: userId,
+					}
+
+					sendAjaxTrue(carList, param, "json", function(data) {
+							
+							
+						if(data.result.length == 0) {
+							document.getElementById("carNum").classList.remove("num_gwc");
+						} else if(data.result.length< 100 ){
+							document.getElementById("carNum").classList.add("num_gwc");
+							document.getElementById("carNum").innerHTML =data.result.length;
+						} else {
+							document.getElementById("carNum").innerHTML = "99+";
+						}
+
+					})
+				}
+
+				/*	var param = {
+						creatorId: 10014,
+					}
+
+					sendAjaxTrue(carList, param, "json", function(data) {
+
+						document.getElementById("carNum").innerHTML = data.result.length;
+					})*/
+
 			}
 
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
-			}
+			function changeNum() {
+				
+				var cpId = GetRequest()['cp'];
+				var re = GetRequest()['re'];
+				setlocalStorage("re", re);
+				var coId = GetRequest()['c'];
+				var userId = getUserId();
+				if(!userProving()) {
+					setlocalStorage("returnLoginURL",path+"/product/goods/details.html?c="+coId +"&cp="+cpId+"&re="+getlocalStorage("re")+"&code="+getlocalStorage("code"));
+					window.location.href = path+"/login/loginAmong.html";
+				}
+				var carNum = document.getElementById("carNum").innerHTML;
+				var number = 1;
+				 
+				
+				if(document.getElementById("num").value != ""){
+					number = document.getElementById("num").value;
+				}else{
+					number = 1;
+				}
+					
+				if(document.getElementById("num").value == 0){
+					num = 1;
+				}	
+					
+				var commodityPriceId = document.getElementById("commodityPriceId").value;
+				var commodityId = document.getElementById("commodityId").value;
 
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
+				var param = {
+					commodityId: commodityId,
+					commodityPriceId: commodityPriceId,
+					number: number,
+					creatorId: userId,
+					userId: re,
+				}
+				tanchu_close();
+				 
+				sendAjaxTrue(insertCar, param, "json", function(data) {
+					if(data.resultcode == 1) {
+						layer.msg("添加成功", { time: 1000 });
 
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
+						carListNumber();
+					} else {
+						layer.msg("添加失败", { time: 1000 });
+					}
+				})
 
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
+			}
+			function tzindex(){
+				window.location.href=path+'/index.html';
 			}
 		</script>
 	</body>

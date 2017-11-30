@@ -3,23 +3,19 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title>首页</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
 	</head>
 
 	<body>
 		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
+			<div class="mui-tab-item" onclick="shouye()">
 				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
+					<img src="/assets/img/shouye_n.png" id="img1"/>
 				</span>
 				<span class="mui-tab-label mt-5">首页</span>
 			</div>
@@ -35,157 +31,162 @@
 				</span>
 				<span class="mui-tab-label mt-5">精选</span>
 			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
+			<div class="mui-tab-item mui-active" onclick="tz_p()">
 				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
+					<img src="/assets/img/geren_o.png" id="img4">
 				</span>
 				<span class="mui-tab-label mt-5">个人中心</span>
 			</div>
 		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
-			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="index_l">
-			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
-			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
-
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
+		<div class="mui-content" style="display: block;">
+			<div class="p_bg">
+				<div class="public-cell p_core">
+					<div class="public_primary text-center">个人中心</div>
+					<div class="p_core_img">
+						<!--<a href="/personal/information/myinfo.html">
+							<img src="/assets/img/personal/wodxiaoxi.png" />
+						</a>-->
+						
+							<img src="/assets/img/personal/sez.png"  onclick="p_ses()"/>
+						
 					</div>
 				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
+			
+					<div class="public-cell p_xinxi public-cell-color" onclick="p_edit()">
+						<img src="" id="headimg" />
+						<div class="public_primary">
+							<h1 id="name"></h1>
+							<p>
+								<span id="sex"></span>
+								<span>I</span>
+								<span id="adress"></span>
+							</p>
+						</div>
+						<span class="public-horn-45 mr-15"></span>
+					</div>
+				
+				<div class="p_ye">
+					<span>可用余额：<span id="p_price" class="ml-5"></span></span>
+					<span class="pull-right" onclick="pricemx()">明细</span>
+				</div>
+			</div>
+			<!--<div class="p_gn">
+				<div class="p_gn_div" onclick="window.location.href='/personal/recharge.html'">
+					<div class="public-cell" style="padding: 0;">
+						<img src="/assets/img/personal/geren_chongz.png" />
+						<div class="public_primary">
+							充值
+						</div>
 					</div>
 				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
+				<div class="p_gn_div" onclick="window.location.href='/personal/withdrawals.html'">
+					<div class="public-cell" style="padding: 0;">
+						<img src="/assets/img/personal/geren_tixian.png" />
+						<div class="public_primary">
+							提现
+						</div>
 					</div>
 				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
+			</div>-->
 
+		<!--	<a href="/personal/privilege/index.html">
+				<div class="public-cell p_list  mt-10">
+					<img src="/assets/img/personal/geren_tequan.png" />
+					<div class="public_primary">
+						专享特权
+					</div>
+					<span class="public2-horn-45"></span>
+				</div>
+			</a>-->
+
+				<div class="public-cell p_list public-cell-about mt-10" onclick="tzorder()">
+					<img src="/assets/img/personal/shouye_kangfu.png" />
+					<div class="public_primary">
+						我的订单
+					</div>
+					<span class="public2-horn-45"></span>
+				</div>
+		
+			
+				<div class="public-cell p_list public-cell-about" onclick="tzyhj()">
+					<img src="/assets/img/personal/wodyouhuijuan.png" />
+					<div class="public_primary">
+						我的优惠券
+					</div>
+					<span class="public2-horn-45"></span>
+				</div>
+		
+		
+				<div class="public-cell p_list" onclick="tzshoucang()">
+					<img src="/assets/img/personal/wujiaoxing_2.png" />
+					<div class="public_primary">
+						我的收藏
+					</div>
+					<span class="public2-horn-45"></span>
+				</div>
+		
+				<div class="public-cell p_list mt-10 public-cell-about" onclick="tzjiangkang()">
+					<img src="/assets/img/personal/wodjiankangdangan.png" />
+					<div class="public_primary">
+						健康档案
+					</div>
+					<span class="public2-horn-45"></span>
+				</div>
+		
+			<!--<div class="public-cell p_list public-cell-about mt-10">
+				<img src="/assets/img/personal/wodpingjia.png" />
+				<div class="public_primary">
+					意见反馈
+				</div>
+				<span class="public2-horn-45"></span>
+			</div>-->
+			<a href="tel:400-8090-120">
+				<div class="public-cell p_list">
+					<img src="/assets/img/personal/lianxikefu.png" />
+					<div class="public_primary">
+						联系客服
+					</div>
+					<span class="fz-14 mr-10 mt-5">400-8090-120</span>
+					<span class="public2-horn-45"></span>
+				</div>
+			</a>
 		</div>
 		<!--#include file="/common/toastDialog.html"-->
 		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
+		<script src="/assets/js/personal/index.js"></script>
 		<script src="/assets/js/layer/layer.js"></script>
 		<script src="/assets/js/login/index.js"></script>
 		<script>
-			$(function() {
-				var pids = "";
-
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
-				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
-				}
-			})
-
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
-
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
-				}
-
+			var path = basePath();
+			function shouye(){
+				window.location.href = path+'/index.html';
 			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
+			function nurse(){
+				window.location.href = path+'/nurse/index.html'
 			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
+			function i_jingxuan(){
+				window.location.href = path+'/activity/index.html';
 			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
-				}
-
+			function p_ses(){
+				window.location.href = path+'/personal/option/index.html';
 			}
-
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
+			function p_edit(){
+				window.location.href = path+'/personal/information/edit.html';
 			}
-
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
+			function tzorder(){
+				window.location.href = path+'/personal/order/service/orderlist.html';
 			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
+			function tzyhj(){
+				window.location.href = path+'/personal/Coupon.html';
 			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
+			function tzshoucang(){
+				window.location.href = path+'/personal/collect/index.html';
 			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
+			function tzjiangkang(){
+				window.location.href = path+'/product/visit/HealthRecords.html';				
+			}
+			function pricemx(){
+				window.location.href = path+'/personal/record.html';
 			}
 		</script>
 	</body>

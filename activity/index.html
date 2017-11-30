@@ -3,23 +3,20 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title>金牌精选</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
+		<script src="/assets/js/login/index.js"></script>
 	</head>
 
 	<body>
 		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
+			<div class="mui-tab-item" onclick="shouye()">
 				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
+					<img src="/assets/img/shouye_n.png" id="img1"/>
 				</span>
 				<span class="mui-tab-label mt-5">首页</span>
 			</div>
@@ -29,9 +26,9 @@
 				</span>
 				<span class="mui-tab-label mt-5">护士</span>
 			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
+			<div class="mui-tab-item mui-active" onclick="i_jingxuan()">
 				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
+					<img src="/assets/img/jingxuan_o.png" id="img3"/>
 				</span>
 				<span class="mui-tab-label mt-5">精选</span>
 			</div>
@@ -42,151 +39,82 @@
 				<span class="mui-tab-label mt-5">个人中心</span>
 			</div>
 		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
+
+		<div class="mui-content mb-10">
+			<!--<img src="/assets/img/banner.png" class="img-responsive" />-->
+			<section id="a_list" style="padding-top: 10px;">
+				<!--<div class="public-cell" onclick="a_atv1()">
+					<div class="a_list">
+						<img src="/assets/img/activity/16.png" class="img-responsive" />
+						<p class="color">人生就像开车旅行，就怕刹车失灵！</p>
+					</div>
 				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
+				<div class="public-cell" onclick="a_atv2()" style="padding-top: 0;">
+					<div class="a_list">
+						<img src="/assets/img/activity/17.png" class="img-responsive" />
+						<p class="color">45岁闫妮做了这件事后，谈了段姐弟恋！</p>
+					</div>
+				</div>
+				<div class="public-cell" onclick="a_atv3()" style="padding-top: 0;">
+					<div class="a_list">
+						<img src="/assets/img/activity/18.png" class="img-responsive" />
+						<p class="color">2017年北京口腔机构洗牙价格一览表</p>
+					</div>
+				</div>
+				<div class="public-cell" onclick="a_atv4()" style="padding-top: 0;">
+					<div class="a_list">
+						<img src="/assets/img/activity/19.png" class="img-responsive" />
+						<p class="color">只需一招，让你体验被抢着吻的快感！</p>
+					</div>
 				</div>-->
-			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="index_l">
-			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
-			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
-
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
-					</div>
-				</div>
 			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
-
 		</div>
-		<!--#include file="/common/toastDialog.html"-->
-		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
-		<script src="/assets/js/layer/layer.js"></script>
-		<script src="/assets/js/login/index.js"></script>
 		<script>
-			$(function() {
-				var pids = "";
+				var path = basePath();
+									function shouye() {
+										window.location.href = path + '/index.html';
+									}
 
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
-				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
+									function nurse() {
+										window.location.href = path + '/nurse/index.html'
+									}
+
+									function i_jingxuan() {
+										window.location.href = path + '/activity/index.html';
+									}
+									/*function a_atv1(){
+										window.location.href=path +'/activity/details.html';
+									}
+									function a_atv2(){
+										window.location.href=path +'/activity/details2.html';
+									}
+									function a_atv3(){
+										window.location.href=path +'/activity/details3.html';
+									}
+									function a_atv4(){
+										window.location.href=path +'/activity/details4.html';
+									}*/
+			$(function() {
+				sendAjaxTrue(jingxuan, "", "json", jxcallback);
+
+				function jxcallback(data) {
+					console.log(data);
+					var jxhtml = [];
+					$.each(data.result, function(i, item) {
+						jxhtml += [
+							'<a href="'+item.link+'">',
+							'<div class="public-cell" style="padding-top: 0;">',
+							'<div class="a_list">',
+							'<img src="' + item.image + '" class="img-responsive" />',
+							'<p class="color">' + item.brief + '</p>',
+							'</div>',
+							'</div>',
+							'</a>'
+						].join("");
+					});
+					$("#a_list").html(jxhtml);
 				}
 			})
-
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
-
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
-				}
-
-			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
-				}
-
-			}
-
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
-			}
-
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
-			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
-			}
 		</script>
 	</body>
 

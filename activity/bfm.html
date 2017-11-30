@@ -3,189 +3,129 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title>活动详情</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
+		<style>
+			html,
+			body {
+				background: #a616fd;
+			}
+		</style>
 	</head>
 
 	<body>
-		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
-				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
-				</span>
-				<span class="mui-tab-label mt-5">首页</span>
-			</div>
-			<div class="mui-tab-item" onclick="nurse()">
-				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
-				</span>
-				<span class="mui-tab-label mt-5">护士</span>
-			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
-				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
-				</span>
-				<span class="mui-tab-label mt-5">精选</span>
-			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
-				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
-				</span>
-				<span class="mui-tab-label mt-5">个人中心</span>
-			</div>
-		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
-			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="index_l">
-			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
-			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
-
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
-					</div>
-				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
-
+		<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171027163451-61397.png" class="img-responsive" style="display: block;" />
+		<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171031180534-56741.png" class="img-responsive" />
+		<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171027164530-22136.png" class="img-responsive" />
+		<div class="bfm_hd">
+			<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171027164549-31875.png" class="img-responsive" />
+			<button class="bfm_btn" onclick="lq_jl()">领取奖励</button>
 		</div>
+		<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171027164615-60751.png" class="img-responsive" />
+		<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171101111633-33228.png" class="img-responsive" />
+		<img src="https://jinpai.b0.upaiyun.com/jinpaihushi/JP20171027164659-28487.png" class="img-responsive" id="tshi_open" />
 		<!--#include file="/common/toastDialog.html"-->
-		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
 		<script src="/assets/js/layer/layer.js"></script>
-		<script src="/assets/js/login/index.js"></script>
 		<script>
-			$(function() {
-				var pids = "";
-
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
-				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
-				}
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+			$("#tshi_open").click(function() {
+				$(this).hide();
+				$("body").css("position", "relative");
 			})
+			var n_id = GetQueryString("id");
+			var n_token = GetQueryString("token");
 
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
+			function lq_jl() {
+				var browser = {
+					versions: function() {
+						var u = navigator.userAgent,
+							app = navigator.appVersion;
+						return { //移动终端浏览器版本信息
+							trident: u.indexOf('Trident') > -1, //IE内核
+							presto: u.indexOf('Presto') > -1, //opera内核
+							webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+							gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+							mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+							ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+							android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+							iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+							iPad: u.indexOf('iPad') > -1, //是否iPad
+							webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+						};
+					}(),
+					language: (navigator.browserLanguage || navigator.language).toLowerCase()
+				}
+				if(browser.versions.mobile) { //判断是否是移动设备打开。browser代码在下面
+					var ua = navigator.userAgent.toLowerCase(); //获取判断用的对象
+					if(ua.match(/MicroMessenger/i) == "micromessenger") {
+						//在微信中打开
+						$("#tshi_open").show();
+						$("body").css("position", "fixed");
+						return;
+					}
+					if(ua.match(/WeiBo/i) == "weibo") {
+						//在新浪微博客户端打开
+						$("#tshi_open").show();
+						$("body").css("position", "fixed");
+						return;
+					}
+					if(ua.match(/QQ/i) == "qq") {
+						//在QQ空间打开
+						$("#tshi_open").show();
+						$("body").css("position", "fixed");
+						return;
+					} else {
+						if(n_id == "" || n_token == "" || n_id == null || n_token == null) {
 
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
+							var u = navigator.userAgent;
+							var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+							var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+							if(isAndroid) {
+
+								window.location.href = "jp://nurse.com/?ac=https://wap.goldnurse.com/activity/bfm.html"; /***打开app的协议，有安卓同事提供***/
+								window.setTimeout(function() {
+									toas1("您还没有下载金牌康护app是否去下载？", "", "https://resource.goldnurse.com/commons/android/jphs_nurse.apk");
+									/*window.location.href = "";*/
+									/***打开app的协议，有安卓同事提供***/
+								}, 2000);
+							}
+							if(isiOS) {
+								if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+
+									toas1("是否打开金牌康护app?", "", "https://itunes.apple.com/us/app/id1134833684?mt=8");
+
+								}
+							}
+						} else {
+							sessionStorage.setItem("bfmset1", n_id);
+							sessionStorage.setItem("bfmset2", n_token);
+							var param = {
+								id: n_id,
+								token: n_token
+							}
+							sendAjaxTrue(n_ifhefa, param, "json", n_allback);
+						}
+
+						function n_allback(data) {
+							if(data.resultcode == 0) {
+								layer.msg(data.msg, { time: 2000 });
+							} else {
+								window.location.href = '/activity/reward.html';
+							}
+						}
+
+					}
 				}
 
-			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
-				}
-
-			}
-
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
-			}
-
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
-			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
 			}
 		</script>
 	</body>

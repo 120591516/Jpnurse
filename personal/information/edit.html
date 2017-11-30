@@ -2,190 +2,233 @@
 <html>
 
 	<head>
-		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<meta charset="UTF-8">
+		<title>个人资料</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
+		<link rel="stylesheet" href="/assets/css/LArea.css">
+		<link rel="stylesheet" href="/assets/css/mui.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/mui.picker.min.css" />
+		<link href="/assets/css/mobiscroll.2.13.2.css" rel="stylesheet" />
+		<style>
+			::-webkit-input-placeholder {
+				/* WebKit browsers */
+				color: #8D8A97;
+				font-size: 1.4rem;
+			}
+			
+			#canvasOne {
+				display: block;
+				width: 100%;
+			}
+			
+			#img-lists {
+				width: 60px;
+				height: 60px;
+				border: 0;
+				margin-right: 15px;
+			}
+			
+			#img-lists li {
+				width: 60px;
+				height: 60px;
+				margin: 0;
+				border: 0;
+			}
+			
+			#img-lists li img {
+				margin-right: 0;			
+			}
+		</style>
 	</head>
 
 	<body>
-		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
-				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
-				</span>
-				<span class="mui-tab-label mt-5">首页</span>
+		<section>
+			<div class="public-cell p_edit">
+				<div class="public_primary">头像</div>
+				<ul class="img-list" id="img-lists">
+					<li>
+						<label for="upload">
+						<img class="layui-upload-img" id="demo1" />
+					    </label>
+					</li>
+				</ul>
+				<input type="file" id="choose" accept="image/*" multiple class="hide" />
+				<button class="login-btn hide" id="upload">上传</button>
+				<span class="public2-horn-45"></span>
 			</div>
-			<div class="mui-tab-item" onclick="nurse()">
-				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
-				</span>
-				<span class="mui-tab-label mt-5">护士</span>
-			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
-				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
-				</span>
-				<span class="mui-tab-label mt-5">精选</span>
-			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
-				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
-				</span>
-				<span class="mui-tab-label mt-5">个人中心</span>
-			</div>
-		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
+			<div class="public-cell p_edit mt-10 public-cell-about" onclick="edit_name()">
+				<div>姓名</div>
+				<div class="public_primary">
+					<input type="text" value="" id="name" readonly="readonly" />
 				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
+				<span class="public2-horn-45"></span>
 			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
+
+			<div class="public-cell p_edit public-cell-about">
+				<div>性别</div>
+				<div class="public_primary">
+					<select id="sex" class="demo-test-select" data-role="none">
+						<option value="0">男</option>
+						<option value="1" id="aa">女</option>
+					</select>
 				</div>
-				<div class="swiper-pagination"></div>
+				<span class="public2-horn-45"></span>
 			</div>
-			<div class="index_l">
+
+			<div class="public-cell p_edit  public-cell-about birthday" id="birthday" value="" data-options='{"type":"date","beginYear":1917,"endYear":2017}'>
+				<div>出生年月</div>
+				<div class="public_primary">
+					<input id='result' class="ui-alert" placeholder="请选择出生年月">
+				</div>
+				<span class="public2-horn-45"></span>
 			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
+			<div class="public-cell p_edit">
+				<div>地区</div>
+				<div class="public_primary">
+					<input type="text" id="address" placeholder="请选择地区" readonly="readonly"/>
+					<input id="value2" type="hidden" />
+				</div>
+				<span class="public2-horn-45"></span>
 			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
+			<div class="public-cell p_edit mt-10">
+				<div>联系方式</div>
+				<div class="public_primary">
+					<input type="text" value="" id="phone" disabled="disabled" />
+				</div>
+				<span class="public2-horn-45"></span>
+			</div>
 
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
+				<div class="public-cell p_edit mt-10" onclick="add_list()">
+					<div>地址管理</div>
+					<div class="public_primary">
 					</div>
+					<span class="public2-horn-45"></span>
 				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
-
-		</div>
-		<!--#include file="/common/toastDialog.html"-->
-		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
-		<script src="/assets/js/layer/layer.js"></script>
-		<script src="/assets/js/login/index.js"></script>
+		
+		</section>
+		<!--#include file="/common/toastLoading1.html"-->
+		<script src="/assets/js/personal/upload.js"></script>
 		<script>
+			var infoid = JSON.parse(localStorage.getItem("set"));
+			var path = basePath();
 			$(function() {
-				var pids = "";
+				var param = {
+					userId: infoid.id,
+				}
+				sendAjaxTrue(personal, param, "json", personalCallBack);
 
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
+				function personalCallBack(data) {
+					console.info(data);
+					if(data.resultcode == 1) {
+						var headimg = data.result.headPicture;
+						var name = data.result.name;
+						var sex = data.result.sex;
+						var adress = data.result.address;
+						var birthday = data.result.birthday;
+						var phone = data.result.phone;
+						$("#name").val(name);
+						$("#demo1").attr("src", headimg);
+						if(sex == 0) {
+							$("#sex_dummy").val("男");
+						}
+						if(sex == 1) {
+							$("#sex_dummy").val("女");
+						}
+						$("#address").val(adress);
+						$("#result").val(birthday);
+						$("#phone").val(phone);
+					}
 				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
-				}
+
 			})
 
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
+			function edit_name() {
+				var name = $("#name").val();
+				sessionStorage.setItem("name", name);
+				window.location.href = "edit_name.html";
 
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
+			}
+
+			/*function edit_phone() {
+				var phone = $("#phone").val();
+				window.location.href = "edit_phone.html?myphone=" + phone;
+			}*/
+		</script>
+		<script src="/assets/js/LAreaData2.js"></script>
+		<script src="/assets/js/LArea_A.js"></script>
+		<script src="/assets/js/mui.min.js"></script>
+		<script src="/assets/js/mui.picker.min.js"></script>
+		<script src="/assets/js/mobiscroll.2.13.2.js"></script>
+		<script>
+			var area2 = new LArea();
+			area2.init({
+				'trigger': '#address', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+				'valueTo': '#value2', //选择完毕后id属性输出到该位置
+				'keys': {
+					id: 'value',
+					name: 'text'
+				}, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+				'type': 2, //数据源类型
+				'data': [provs_data, citys_data, dists_data] //数据源
+			});
+
+			function address_aa() {
+				alert(111)
+			}
+			(function($) {
+				var btext;
+				$.init();
+				var result = $('#result')[0];
+				var btns = $('.birthday');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							result.value = rs.text;
+							var param = {
+								id: infoid.id,
+								birthday: rs.text,
+							}
+							HttpAjax(edit_p, param, "json", "");
+							picker.dispose();
+						});
+					}, false);
+				});
+			})(mui);
+			$(function() {
+				var opt = {
+					'select': {
+						preset: 'select',
+						display: 'bottom',
+						onSelect: function(valueText, inst) {
+							var sexp;
+							if(valueText == "女") {
+								sexp = 1;
+							}
+							if(valueText == "男") {
+								sexp = 0;
+							}
+							var param = {
+								id: infoid.id,
+								sex: sexp,
+							}
+							HttpAjax(edit_p, param, "json", "");
+						}
+					},
+
 				}
+				$('.demo-test-select').scroller($.extend(opt['select'], opt['default']));
 
-			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
-				}
-
-			}
-
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
-			}
-
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
-			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
+			});
+			var path = basePath();
+			function add_list(){
+				window.location.href =path+"/personal/address/index.html?orderXtype=2";
 			}
 		</script>
 	</body>

